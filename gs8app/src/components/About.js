@@ -1,11 +1,9 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
 
-export const About = () => (
+const About = () => (
     <div>
-        <Router>
-            <p>This is gthe About page</p>
-        </Router>
+            <h1>This is gthe About page</h1>
     </div>
 );
+
+export default About;
