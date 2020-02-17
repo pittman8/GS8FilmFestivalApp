@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-const Donate = () => (
+const Cameras = () => (
     <div>
         <Router>
             <p>This is gthe Donate page</p>
@@ -10,4 +10,4 @@ const Donate = () => (
     </div>
 );
 
-export default Donate;
+export default Cameras;
