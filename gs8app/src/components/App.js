@@ -6,6 +6,16 @@ import '../css/App.css';
 
 import Navbar from './Navbar';
 import About from './About';
+import Contact from './Contact';
+import Donate from './Donate';
+import Events from './Events';
+import Participate from './Participate';
+import Cameras from './Cameras';
+import Deadlines from './Deadlines';
+import Register from './Register';
+import Rules from './Rules';
+import Shop from './Shop';
+import Subscribe from './Subscribe';
 
 class App extends Component {
 
