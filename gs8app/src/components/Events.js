@@ -4,8 +4,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 export const Events = () => (
     <div>
-        <Router>
-            <p>This is gthe Events page</p>
-        </Router>
+        <h1>Look for GS8 2020 Events In January!</h1>
     </div>
 );
