@@ -16,6 +16,7 @@ import Register from './Register';
 import Rules from './Rules';
 import Shop from './Shop';
 import Subscribe from './Subscribe';
+//fixed???
 
 class App extends Component {
 
