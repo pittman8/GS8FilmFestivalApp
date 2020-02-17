@@ -31,10 +31,10 @@ class App extends Component {
                         <Route path="/donate" component={Donate} />
                         <Route path="/events" component={Events} />
                         <Route path="/participate" component={Participate} />
-                        <Route path="/participate/cameras" component={Cameras} />
-                        <Route path="/participate/deadlines" component={Deadlines} />
-                        <Route path="/participate/register" component={Register} />
-                        <Route path="/participate/rules" component={Rules} />
+                        <Route path="/cameras" component={Cameras} />
+                        <Route path="/deadlines" component={Deadlines} />
+                        <Route path="/register" component={Register} />
+                        <Route path="/rules" component={Rules} />
                         <Route path="/shop" component={Shop} />
                         <Route path="/subscribe" component={Subscribe} />
                         <Redirect to="/" />
