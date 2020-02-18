@@ -39,11 +39,35 @@ class Navbar extends React.Component {
         const menuHome = (
             <span>
                 <Button
-                    aria-controls="menu-home"
-                    aria-owns={this.state.open ? 'menu-home' : null}
+                aria-controls="menu-home"
+                aria-owns={this.state.open ? 'menu-home' : null}
+                aria-haspopup="true"
+                onClick={this.handleClick}
+                onMouseOver={this.handleClick}
+            >
+                Home
+            </Button>
+                <Button
+                    aria-controls="menu-about"
+                    aria-owns={this.state.open ? 'menu-about' : null}
                     aria-haspopup="true"
                     onClick={this.handleClick}
                     onMouseOver={this.handleClick}
+                >
+                About
+            </Button>
+            <Menu
+                id="menu-home"
+                anchorEl={this.state.anchorEl}
+                keepMounted
+                open={this.state.open}
+                onMouseLeave={this.handleRequestClose}
+                onClose={this.handleRequestClose}
+            >
+                <MenuItem
+                    component={NavLink}
+                    to="/"
+                    onClick={this.handleRequestClose}
                 >
                     Home
                 </Button>

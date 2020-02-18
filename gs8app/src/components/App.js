@@ -15,6 +15,8 @@ import Rules from './Rules';
 import Shop from './Shop';
 import Subscribe from './Subscribe';
 
+//fixed???
+
 class App extends Component {
 
     render() {
@@ -34,7 +36,6 @@ class App extends Component {
                         <Route path="/rules" component={Rules} />
                         <Route path="/shop" component={Shop} />
                         <Route path="/subscribe" component={Subscribe} />
-
                         <Redirect to="/" />
                     </Switch>
                 </div>
