@@ -47,6 +47,15 @@ class Navbar extends React.Component {
             >
                 Home
             </Button>
+                <Button
+                    aria-controls="menu-about"
+                    aria-owns={this.state.open ? 'menu-about' : null}
+                    aria-haspopup="true"
+                    onClick={this.handleClick}
+                    onMouseOver={this.handleClick}
+                >
+                About
+            </Button>
             <Menu
                 id="menu-home"
                 anchorEl={this.state.anchorEl}
