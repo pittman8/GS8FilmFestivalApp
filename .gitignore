@@ -12,7 +12,9 @@
 /build
 
 # misc
+/.idea
 /idea
+
 /vs
 .DS_Store
 .env.local
