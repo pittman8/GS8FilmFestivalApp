@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 
 const parentDivStyle = {
-    textAlign: 'center'
+    textAlign: 'center',
 };
 
 const rowDivStyle = {
