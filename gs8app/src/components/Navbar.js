@@ -39,47 +39,47 @@ class Navbar extends React.Component {
         const menuHome = (
             <span>
                 <Button
-                aria-controls="menu-home"
-                aria-owns={this.state.open ? 'menu-home' : null}
-                aria-haspopup="true"
-                onClick={this.handleClick}
-                onMouseOver={this.handleClick}
-            >
-                Home
-            </Button>
+                    aria-controls="menu-home"
+                    aria-owns={this.state.open ? 'menu-home' : null}
+                    aria-haspopup="true"
+                    onClick={this.handleClick}
+                    onMouseOver={this.handleClick}
+                >
+                    Home
+                </Button>
                 <Button
                     aria-controls="menu-about"
                     aria-owns={this.state.open ? 'menu-about' : null}
                     aria-haspopup="true"
                     onClick={this.handleClick}
                     onMouseOver={this.handleClick}
-                >
-                About
-            </Button>
-            <Menu
-                id="menu-home"
-                anchorEl={this.state.anchorEl}
-                keepMounted
-                open={this.state.open}
-                onMouseLeave={this.handleRequestClose}
-                onClose={this.handleRequestClose}
-            >
-                <MenuItem
-                    component={NavLink}
-                    to="/"
-                    onClick={this.handleRequestClose}
-                >
-                    Home
-                        </MenuItem>
-                <MenuItem
-                    component={NavLink}
-                    to="/about"
-                    onClick={this.handleRequestClose}
-                >
+                    >
                     About
-                        </MenuItem>
+                </Button>
+                <Menu
+                    id="menu-home"
+                    anchorEl={this.state.anchorEl}
+                    keepMounted
+                    open={this.state.open}
+                    onMouseLeave={this.handleRequestClose}
+                    onClose={this.handleRequestClose}
+                >
+                    <MenuItem
+                        component={NavLink}
+                        to="/"
+                        onClick={this.handleRequestClose}
+                    >
+                        Home
+                    </MenuItem>
+                    <MenuItem
+                        component={NavLink}
+                        to="/about"
+                        onClick={this.handleRequestClose}
+                    >
+                        About
+                    </MenuItem>
                 </Menu>
-                </span>
+            </span>
         );
 
         const menuParticipate = (
@@ -92,7 +92,7 @@ class Navbar extends React.Component {
                     onMouseOver={this.handleClick}
                 >
                     Participate
-                        </Button>
+                </Button>
 
                 <Menu
                     id="menu-participate"
@@ -104,46 +104,53 @@ class Navbar extends React.Component {
                 >
                     <MenuItem
                         component={NavLink}
-                        to="/participate/deadlines"
+                        to="/participate"
+                        onClick={this.handleRequestClose}
+                    >
+                        Participate
+                    </MenuItem>
+                    <MenuItem
+                        component={NavLink}
+                        to="/deadlines"
                         onClick={this.handleRequestClose}
                     >
                         Deadlines & Events
-                        </MenuItem>
+                    </MenuItem>
                     <MenuItem
                         component={NavLink}
-                        to="/participate/registration"
+                        to="/registration"
                         onClick={this.handleRequestClose}
                     >
                         Registration
-                        </MenuItem>
+                    </MenuItem>
                     <MenuItem
                         component={NavLink}
                         to="/shop"
                         onClick={this.handleRequestClose}
                     >
                         Film Purchase
-                        </MenuItem>
+                    </MenuItem>
                     <MenuItem
                         component={NavLink}
-                        to="/participate/filmmakers"
+                        to="/filmmakers"
                         onClick={this.handleRequestClose}
                     >
                         Filmmaker Info
-                        </MenuItem>
+                    </MenuItem>
                     <MenuItem
                         component={NavLink}
                         to="/rules"
                         onClick={this.handleRequestClose}
                     >
                         Rules
-                        </MenuItem>
+                    </MenuItem>
                     <MenuItem
                         component={NavLink}
                         to="/cameras"
                         onClick={this.handleRequestClose}
                     >
                         Camera Manuals
-                        </MenuItem>
+                    </MenuItem>
                 </Menu>
             </span>
         );
