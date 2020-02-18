@@ -1,11 +1,9 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
 
-export const Shop = () => (
+const Rules = () => (
     <div>
-        <Router>
-            <p>This is gthe Shop page</p>
-        </Router>
+        <h1>Shop</h1>
     </div>
 );
+
+export default Rules;

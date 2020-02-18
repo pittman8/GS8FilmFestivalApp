@@ -123,14 +123,14 @@ class Navbar extends React.Component {
                         </MenuItem>
                     <MenuItem
                         component={NavLink}
-                        to="/participate/rules"
+                        to="/rules"
                         onClick={this.handleRequestClose}
                     >
                         Rules
                         </MenuItem>
                     <MenuItem
                         component={NavLink}
-                        to="/participate/cameras"
+                        to="/cameras"
                         onClick={this.handleRequestClose}
                     >
                         Camera Manuals
