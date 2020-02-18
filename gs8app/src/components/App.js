@@ -16,6 +16,7 @@ import Register from './Register';
 import Rules from './Rules';
 import Shop from './Shop';
 import Subscribe from './Subscribe';
+import FilmmakerInfo from './Filmmaker-info';
 //fixed???
 
 class App extends Component {
@@ -32,6 +33,7 @@ class App extends Component {
                         <Route path="/events" component={Events} />
                         <Route path="/participate" component={Participate} />
                         <Route path="/cameras" component={Cameras} />
+                        <Route path="/filmmaker-info" component={FilmmakerInfo} />
                         <Route path="/deadlines" component={Deadlines} />
                         <Route path="/register" component={Register} />
                         <Route path="/rules" component={Rules} />

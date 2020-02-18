@@ -104,14 +104,14 @@ class Navbar extends React.Component {
                 >
                     <MenuItem
                         component={NavLink}
-                        to="/participate/deadlines"
+                        to="/deadlines"
                         onClick={this.handleRequestClose}
                     >
                         Deadlines & Events
                         </MenuItem>
                     <MenuItem
                         component={NavLink}
-                        to="/participate/registration"
+                        to="/register"
                         onClick={this.handleRequestClose}
                     >
                         Registration
@@ -125,21 +125,21 @@ class Navbar extends React.Component {
                         </MenuItem>
                     <MenuItem
                         component={NavLink}
-                        to="/participate/filmmakers"
+                        to="/filmmaker-info"
                         onClick={this.handleRequestClose}
                     >
                         Filmmaker Info
                         </MenuItem>
                     <MenuItem
                         component={NavLink}
-                        to="/participate/rules"
+                        to="rules"
                         onClick={this.handleRequestClose}
                     >
                         Rules
                         </MenuItem>
                     <MenuItem
                         component={NavLink}
-                        to="/participate/cameras"
+                        to="/cameras"
                         onClick={this.handleRequestClose}
                     >
                         Camera Manuals
