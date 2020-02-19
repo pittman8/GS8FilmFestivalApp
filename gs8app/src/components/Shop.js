@@ -25,9 +25,4 @@ const Shop = () => (
     </div>
 );
 
-<<<<<<< HEAD
 export default Shop;
-
-=======
-export default Shop;
->>>>>>> dd75b34d4d01929308d369f4ff582f7396e4c8a2
