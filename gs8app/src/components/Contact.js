@@ -16,7 +16,7 @@ const Contact = () => (
 <label for="message">Type your message here</label>
 <textarea name="message"></textarea>
   <input type="submit" value="Submit" />
-</form> 
+</form>
     </div>
 );
 

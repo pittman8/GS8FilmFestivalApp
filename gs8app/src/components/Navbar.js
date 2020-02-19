@@ -24,126 +24,144 @@ class Navbar extends React.Component {
     
     state = {
         anchorEl: null,
-        open: false,
+        homeDropMenuOpen: false,
+        participateDropMenuOpen: false,
     };
 
-    handleClick = event => {
-        this.setState({ open: true, anchorEl: event.currentTarget });
+    handleHomeClick = event => {
+        this.setState({ homeDropMenuOpen: true, anchorEl: event.currentTarget });
     };
 
-    handleRequestClose = () => {
-        this.setState({ open: false, anchorEl: null });
+    handleHomeRequestClose = () => {
+        this.setState({ homeDropMenuOpen: false, anchorEl: null });
+    };
+
+    handleParticipateClick = event => {
+        this.setState({ participateDropMenuOpen: true, anchorEl: event.currentTarget });
+    };
+
+    handleParticipateRequestClose = () => {
+        this.setState({ participateDropMenuOpen: false, anchorEl: null });
     };
 
     render() {
         const menuHome = (
             <span>
                 <Button
-                aria-controls="menu-home"
-                aria-owns={this.state.open ? 'menu-home' : null}
-                aria-haspopup="true"
-                onClick={this.handleClick}
-                onMouseOver={this.handleClick}
-            >
-                Home
-            </Button>
-                <Button
-                    aria-controls="menu-about"
-                    aria-owns={this.state.open ? 'menu-about' : null}
+                    aria-controls="menu-home"
+                    aria-owns={this.state.homeDropMenuOpen ? 'menu-home' : null}
                     aria-haspopup="true"
-                    onClick={this.handleClick}
-                    onMouseOver={this.handleClick}
-                >
-                About
-            </Button>
-            <Menu
-                id="menu-home"
-                anchorEl={this.state.anchorEl}
-                keepMounted
-                open={this.state.open}
-                onMouseLeave={this.handleRequestClose}
-                onClose={this.handleRequestClose}
-            >
-                <MenuItem
-                    component={NavLink}
-                    to="/"
-                    onClick={this.handleRequestClose}
+                    onClick={this.handleHomeClick}
+                    onMouseOver={this.handleHomeClick}
                 >
                     Home
-                        </MenuItem>
-                <MenuItem
-                    component={NavLink}
-                    to="/about"
-                    onClick={this.handleRequestClose}
+                </Button>
+                <Menu
+                    id="menu-home"
+                    anchorEl={this.state.anchorEl}
+                    keepMounted
+                    open={this.state.homeDropMenuOpen}
+                    onMouseLeave={this.handleHomeRequestClose}
+                    onClose={this.handleHomeRequestClose}
                 >
-                    About
-                        </MenuItem>
+                    <MenuItem
+                        component={NavLink}
+                        to="/"
+                        onClick={this.handleHomeRequestClose}
+                    >
+                        Home
+                    </MenuItem>
+                    <MenuItem
+                        component={NavLink}
+                        to="/about"
+                        onClick={this.handleHomeRequestClose}
+                    >
+                        About
+                    </MenuItem>
                 </Menu>
-                </span>
+            </span>
         );
+
+
+
+
+
+
+
+
 
         const menuParticipate = (
             <span>
                 <Button
                     aria-controls="menu-participate"
-                    aria-owns={this.state.open ? 'menu-participate' : null}
+                    aria-owns={this.state.participateDropMenuOpen ? 'menu-participate' : null}
                     aria-haspopup="true"
-                    onClick={this.handleClick}
-                    onMouseOver={this.handleClick}
+                    onClick={this.handleParticipateClick}
+                    onMouseOver={this.handleParticipateClick}
                 >
                     Participate
-                        </Button>
+                </Button>
 
                 <Menu
                     id="menu-participate"
                     anchorEl={this.state.anchorEl}
                     keepMounted
-                    open={this.state.open}
-                    onMouseLeave={this.handleRequestClose}
-                    onClose={this.handleRequestClose}
+                    open={this.state.participateDropMenuOpen}
+                    onMouseLeave={this.handleParticipateRequestClose}
+                    onClose={this.handleParticipateRequestClose}
                 >
                     <MenuItem
                         component={NavLink}
-                        to="/deadlines"
-                        onClick={this.handleRequestClose}
+                        to="/participate"
+                        onClick={this.handleParticipateRequestClose}
                     >
-                        Deadlines & Events
-                        </MenuItem>
+                        Participate
+                    </MenuItem>
                     <MenuItem
                         component={NavLink}
+
+                        to="/deadlines"
+                        onClick={this.handleParticipateRequestClose}
+                    >
+                        Deadlines & Events
+                    </MenuItem>
+                    <MenuItem
+                        component={NavLink}
+
                         to="/register"
-                        onClick={this.handleRequestClose}
+                        onClick={this.handleParticipateRequestClose}
                     >
                         Registration
-                        </MenuItem>
+                    </MenuItem>
                     <MenuItem
                         component={NavLink}
                         to="/shop"
-                        onClick={this.handleRequestClose}
+                        onClick={this.handleParticipateRequestClose}
                     >
                         Film Purchase
-                        </MenuItem>
+                    </MenuItem>
                     <MenuItem
                         component={NavLink}
                         to="/filmmaker-info"
-                        onClick={this.handleRequestClose}
+                        onClick={this.handleParticipateRequestClose}
                     >
                         Filmmaker Info
-                        </MenuItem>
+                    </MenuItem>
                     <MenuItem
                         component={NavLink}
-                        to="rules"
-                        onClick={this.handleRequestClose}
+                        to="/rules"
+
+                        onClick={this.handleParticipateRequestClose}
                     >
                         Rules
-                        </MenuItem>
+                    </MenuItem>
                     <MenuItem
                         component={NavLink}
                         to="/cameras"
-                        onClick={this.handleRequestClose}
+                        onClick={this.handleParticipateRequestClose}
                     >
                         Camera Manuals
-                        </MenuItem>
+                    </MenuItem>
                 </Menu>
             </span>
         );
@@ -186,3 +204,12 @@ class Navbar extends React.Component {
 };   
 
 export default Navbar;
+
+/*
+<Button
+    component={NavLink}
+    to="/about"
+>
+    About
+</Button>
+*/

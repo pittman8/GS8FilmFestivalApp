@@ -17,6 +17,10 @@
 /build
 
 # misc
+/.idea
+.idea
+/idea
+/vs
 .DS_Store
 .env.local
 .env.development.local
