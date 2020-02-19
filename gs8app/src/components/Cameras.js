@@ -16,9 +16,6 @@ const colDivStyle = {
     width: '8em',
 };
 
-const pdfIcoImgStyle = {
-    align: 'top',
-};
 
 const Cameras = () => (
     <div stylr={parentDivStyle}>
@@ -62,7 +59,7 @@ const Cameras = () => (
                     <Button
                         href={require("../pdfManuals/bce5df_07361c7023864924821c4cccb1d90dd5.pdf")}
                     >
-                        <img src={require('../img/icon_PDF.jpg')} alt='PDF icon for Yashica LD8' style={pdfIcoImgStyle} />
+                        <img src={require('../img/icon_PDF.jpg')} alt='PDF icon for Yashica LD8' />
                     </Button>
                     <br />
                     <Button
