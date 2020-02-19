@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Participate = () => (
+const Deadlines = () => (
 <div>
     <h1>GS8 2020 Filmmaker
 
@@ -63,9 +63,8 @@ const Participate = () => (
 
         at Charles Smith Wines Jet City in Georgetown
         1136 S Albro Pl, Seattle, WA 98108</p>
-    >>>>>>> fa76858e8ab61669cc9d5b3a286b2e917a3a189e
 </div>
 );
 
-export default Participate;
+export default Deadlines;
 

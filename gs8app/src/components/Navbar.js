@@ -135,6 +135,7 @@ class Navbar extends React.Component {
                     </MenuItem>
                     <MenuItem
                         component={NavLink}
+
                         to="/deadlines"
                         onClick={this.handleRequestClose}
                     >
@@ -142,7 +143,8 @@ class Navbar extends React.Component {
                     </MenuItem>
                     <MenuItem
                         component={NavLink}
-                        to="/registration"
+
+                        to="/register"
                         onClick={this.handleRequestClose}
                     >
                         Registration
@@ -156,7 +158,7 @@ class Navbar extends React.Component {
                     </MenuItem>
                     <MenuItem
                         component={NavLink}
-                        to="/filmmakers"
+                        to="/filmmaker-info"
                         onClick={this.handleRequestClose}
                     >
                         Filmmaker Info
@@ -164,6 +166,7 @@ class Navbar extends React.Component {
                     <MenuItem
                         component={NavLink}
                         to="/rules"
+
                         onClick={this.handleRequestClose}
                     >
                         Rules
