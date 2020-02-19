@@ -12,7 +12,12 @@ const rowDivStyle = {
 const colDivStyle = {
     textAlign: 'center',
     display: 'inline-block',
-    width: '10%',
+    center: 'top',
+    width: '8em',
+};
+
+const pdfIcoImgStyle = {
+    align: 'top',
 };
 
 const Cameras = () => (
@@ -57,7 +62,7 @@ const Cameras = () => (
                     <Button
                         href={require("../pdfManuals/bce5df_07361c7023864924821c4cccb1d90dd5.pdf")}
                     >
-                        <img src={require('../img/icon_PDF.jpg')} alt='PDF icon for Yashica LD8' />
+                        <img src={require('../img/icon_PDF.jpg')} alt='PDF icon for Yashica LD8' style={pdfIcoImgStyle} />
                     </Button>
                     <br />
                     <Button
@@ -65,7 +70,7 @@ const Cameras = () => (
                         color="primary"
                         href={require("../pdfManuals/bce5df_07361c7023864924821c4cccb1d90dd5.pdf")}
                     >
-                        Yashica LD8
+                        Yashica<br />LD8
                     </Button>
                 </div>
                 <div style={colDivStyle}>
@@ -95,7 +100,7 @@ const Cameras = () => (
                         color="primary"
                         href={require("../pdfManuals/bce5df_39e9dcb4a9be48c59f952ea75dcfbb6f.pdf")}
                     >
-                        GAF XL415
+                        GAF<br />XL415
                     </Button>
                 </div>
             </div>
