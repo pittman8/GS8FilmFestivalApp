@@ -15,6 +15,7 @@ import Rules from './Rules';
 import Shop from './Shop';
 import Subscribe from './Subscribe';
 import FilmmakerInfo from './Filmmaker-info';
+import Home from './Home';
 //fixed???
 
 class App extends Component {
@@ -37,6 +38,7 @@ class App extends Component {
                         <Route path="/rules" component={Rules} />
                         <Route path="/shop" component={Shop} />
                         <Route path="/subscribe" component={Subscribe} />
+                        <Route path="/" component={Home} />
                         <Redirect to="/" />
                     </Switch>
                 </div>
