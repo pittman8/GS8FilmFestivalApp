@@ -82,14 +82,6 @@ class Navbar extends React.Component {
             </span>
         );
 
-
-
-
-
-
-
-
-
         const menuParticipate = (
             <span>
                 <Button
@@ -170,6 +162,12 @@ class Navbar extends React.Component {
             <div className="navbar">
                 <AppBar position="static">
                     <Toolbar>
+                        <Button
+                            component={NavLink}
+                            to="/admin-data"
+                        >
+                            AdminData
+                        </Button>
                         {menuHome}
                         <Button
                             component={NavLink}
@@ -195,7 +193,7 @@ class Navbar extends React.Component {
                             to="/shop"
                         >
                             <ShoppingCartIcon />
-                        </IconButton>
+                        </IconButton>                        
                     </Toolbar>
                 </AppBar>
             </div>

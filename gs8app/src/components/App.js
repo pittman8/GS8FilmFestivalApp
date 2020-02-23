@@ -16,6 +16,7 @@ import Shop from './Shop';
 import Subscribe from './Subscribe';
 import FilmmakerInfo from './Filmmaker-info';
 import Home from './Home';
+import AdminData from './AdminData';
 //fixed???
 
 class App extends Component {
@@ -26,6 +27,7 @@ class App extends Component {
                 <Navbar />
                 <div id="contents">
                     <Switch>
+                        <Route path="/admin-data" component={AdminData} />
                         <Route path="/about" component={About} />
                         <Route path="/contact" component={Contact} />
                         <Route path="/donate" component={Donate} />
@@ -38,7 +40,7 @@ class App extends Component {
                         <Route path="/rules" component={Rules} />
                         <Route path="/shop" component={Shop} />
                         <Route path="/subscribe" component={Subscribe} />
-                        <Route path="/" component={Home} />
+                        <Route path="/" component={Home} />                        
                         <Redirect to="/" />
                     </Switch>
                 </div>
