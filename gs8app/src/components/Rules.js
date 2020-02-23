@@ -8,16 +8,19 @@ const parentDivStyle = {
 };
 
 const cardStyle = {
-    width: '36em',
     textAlign: 'center',
-    padding: '25px',
-    margine: '25px',
+    padding: '15px',
+    margine: '15px',
 };
 
-const h1Style = {
+const titleStyle = {
     fontWeight: 'bold',
-    textAlign: 'justify',
+    textAlign: 'center',
     fontSize: '2.2em'
+};
+
+const divStyle = {
+    textAlign: 'left',
 };
 
 const pStyle = {
@@ -27,23 +30,17 @@ const pStyle = {
     fontSize: '1.2em'
 };
 
-const divButtonStyle = {
-    textAlign: 'center',
-    padding: '25px',
-    margine: '25px',
+const imgStyle = {
+    maxWidth: '100%',
+    height: 'auto',
+
 };
-
-
-
-
-
-
 
 const Rules = () => (
     <div style={parentDivStyle}>
         <Card style={cardStyle}>
-            <p style={pStyle}>GS8 Rules and Guidelines</p>
-            <div>
+            <p style={titleStyle}>GS8 Rules and Guidelines</p>
+            <div style={divStyle}>
                 <p style={pStyle}>
                     The Georgetown Super 8 Film Festival is a community-based amateur film project.  Please read the following rules and guidelines carefully.  By participating in the project, you agree to respect and follow the rules outlined below.
                 </p>
@@ -102,7 +99,11 @@ const Rules = () => (
                     <b>13.</b> All films must be shot within the Duwamish Valley as defined by the image below.  This area is both sides of the Duwamish river from the West Seattle Bridge to the Tukwila border and from west of I5 to East of 509.
                 </p>
 
-                <img src={require('../img/gs8_rules_map.jpg')} alt='Map of the borders of Georgetown' />
+                <img
+                    src={require('../img/gs8_rules_map.jpg')}
+                    alt='Map of the borders of Georgetown'
+                    style={imgStyle}
+                />
 
             </div>
         </Card>
