@@ -1,6 +1,4 @@
 import React from 'react';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
 class Register extends React.Component {

@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\components",
-    "\\src\\img"
+    "\\src\\api",
+    "\\src\\components"
   ],
-  "SelectedNode": "\\src\\components\\Rules.js",
+  "SelectedNode": "\\src\\components\\Filmmaker-info.js",
   "PreviewInSolutionExplorer": false
 }

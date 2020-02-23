@@ -1,5 +1,4 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import '../css/filmPopup.css';

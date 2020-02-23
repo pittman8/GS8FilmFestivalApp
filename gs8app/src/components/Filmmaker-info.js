@@ -55,12 +55,12 @@ const FilmmakerInfo = () => (
 
         <div>
             <h3>How to make a Super 8 Film</h3>
-            <iframe width="690" height="388" src="https://www.youtube.com/embed/N7OCSw9w-IA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe title="How to make a Super 8 Film" width="690" height="388" src="https://www.youtube.com/embed/N7OCSw9w-IA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
         <div>
             <h3>Cameras</h3>
-            <iframe width="980" height="551" src="https://www.youtube.com/embed/BqLx6dyzVO0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe title="Cameras" width="980" height="551" src="https://www.youtube.com/embed/BqLx6dyzVO0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
         <div>
