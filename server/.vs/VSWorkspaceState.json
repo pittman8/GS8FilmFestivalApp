@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\controllers",
+    "\\db",
+    "\\models",
+    "\\routes"
+  ],
+  "SelectedNode": "\\routes\\tags-router.js",
+  "PreviewInSolutionExplorer": false
+}
