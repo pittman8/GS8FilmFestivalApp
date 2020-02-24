@@ -1,18 +1,55 @@
 import React from 'react';
+import {Card, Button} from '@material-ui/core';
+
 
 const FilmmakerInfo = () => (
     <div>
-        <div>
-        <button type="button">Introduction</button>
-        <button type="button">Filming Tips</button>
-        <button type="button">Cameras</button>
-        <button type="button">Links</button>
-        <button type="button">Rules</button>
-        <button type="button">Film Ideas</button>
-        <button type="button">Sound</button>
-        </div>
+        <Card>
+        <Button
+                        size="large"
+                        color="primary"
+                        variant="contained"
+                        href="#intro"
+                    >Introduction</Button>
+        <Button
+                        size="large"
+                        color="primary"
+                        variant="contained"
+                        href="#filmtips"
+                    >Filming Tips</Button>
+        <Button
+                        size="large"
+                        color="primary"
+                        variant="contained"
+                        href="#cameras"
+                    >Cameras</Button>
+        <Button
+                        size="large"
+                        color="primary"
+                        variant="contained"
+                        href="#links"
+                    >Links</Button>
+        <Button
+                        size="large"
+                        color="primary"
+                        variant="contained"
+                        href="/rules"
+                    >Rules</Button>
+        <Button
+                        size="large"
+                        color="primary"
+                        variant="contained"
+                        href="#filmideas"
+                    >Film Ideas</Button>
+        <Button
+                        size="large"
+                        color="primary"
+                        variant="contained"
+                        href="#sound"
+                    >Sound</Button>
+        </Card>
 
-        <div>
+        <Card>
             <h3><b><u>
             Thank You for Participating in the Georgetown Super 8 Film Festival 2020 
             </u></b></h3>
@@ -38,44 +75,48 @@ const FilmmakerInfo = () => (
 
 
             </p>
-        </div>
+        </Card>
 
-        <div>
+        <Card id="intro">
             <h3> Introduction </h3>
-            <h5><u>What is SUper 8?</u></h5>
+            <h4><u>What is Super 8?</u></h4>
             <p>
             Super 8 is a small format film that was popular for making home movies 35 years ago.  Many artists and beginning filmmakers used this medium because it was cheaper and easier to use than 16mm film and could provide a way to create a very low-budget independent film.  Filmmakers such as Spike Lee, JJ Abrams, and Steven Spielberg got their first taste of filmmaking using super 8, and its gritty look brought a renewed interest to the medium among artist and MTV videos responding to the rise of video use in the ’80s. 
             <br /><br />
             Super 8 is a film-based, light-sensitive medium, that must be processed after shooting before the filmmaker can see the results. This is a considerably different filmmaking experience than digital film, and requires attention to lighting, focusing, and framing without instant knowledge of what the camera is capturing.  To truly appreciate this unique film format, it is best to forget any Disney like expectations, embrace the beauty of film, and love the imperfections that happen when recording in this unique format. 
             </p>
-        </div>
+        </Card>
 
-        <h3>Filming Tips</h3>
+<Card  id="filmtips">
+
+<h3>Filming Tips</h3>
         <h4>All film due March 22nd</h4>
 
-        <div>
+</Card>
+
+        <Card>
             <h3>How to make a Super 8 Film</h3>
             <iframe title="How to make a Super 8 Film" width="690" height="388" src="https://www.youtube.com/embed/N7OCSw9w-IA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+        </Card>
 
-        <div>
+        <Card id="cameras">
             <h3>Cameras</h3>
             <iframe title="Cameras" width="980" height="551" src="https://www.youtube.com/embed/BqLx6dyzVO0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+        </Card>
 
-        <div>
+        <Card id="links">
             <h3>Links</h3>
-        </div>
+        </Card>
 
-        <div>
+        <Card id="filmideas">
             <h3>Film Ideas</h3>
-        </div>
+        </Card>
 
-        <div>
+        <Card id="sound">
             <h3>Sound</h3>
             <p>The sound cannot be synced with your film which means that having your sound fit perfectly with what is being shown is not possible, therefore shoot/ record accordingly.</p>
             <h4>Due April 8th</h4>
-        </div>
+        </Card>
 
 
    </div>
