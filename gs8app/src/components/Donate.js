@@ -1,43 +1,14 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
-
-const parentDivStyle = {
-    textAlign: 'center',
-    display: 'inline-block',
-};
-
-const cardStyle = {
-    width: '36em',
-    textAlign: 'center',
-    padding: '25px',
-    margine: '25px',
-};
-
-const h1Style = {
-    fontWeight: 'bold',
-    textAlign: 'justify',
-    fontSize: '2.2em'
-};
-
-const pStyle = {
-    display: 'inline-block',
-    textAlign: 'justify',
-    fontSize: '1.2em'
-};
-
-const divButtonStyle = {
-    textAlign: 'center',
-    padding: '25px',
-    margine: '25px',
-};
+import styles from '../css/styles';
 
 const Donate = () => (
-    <div style={parentDivStyle}>
-        <Card style={cardStyle}>
+    <div style={styles.parentDivStyle}>
+        <Card style={styles.cardStyle}>
             <div >
-                <p style={h1Style}>Make a tax deductible donation now</p>
-                <p style={pStyle}>
+                <p style={styles.titleStyle}>Make a tax deductible donation now</p>
+                <p style={styles.pStyle}>
                     The Georgetown Super 8 Film Festival is fiscally sponsored by
                     Mini Mart City Park, a place for the arts, education, environmental
                     action, and community collaboration currently under construction
@@ -48,7 +19,7 @@ const Donate = () => (
                     Donation page and scroll to the GS8 Donate button at the
                     bottom.
                 </p>
-                <div style={divButtonStyle}>
+                <div >
                     <Button
                         size="large"
                         color="primary"

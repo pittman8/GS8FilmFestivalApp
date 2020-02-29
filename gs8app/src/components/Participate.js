@@ -1,28 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
-
-const buttonStyle = {};
-
-
-
-const parentDivStyle = {
-    textAlign: 'center',
-    display: 'inline-block',
-    width: '48em',
-};
-
-const cardStyle = {
-    textAlign: 'center',
-    padding: '15px',
-    margine: '15px',
-};
-
-const titleStyle = {
-    fontWeight: 'bold',
-    textAlign: 'center',
-    fontSize: '2.2em'
-};
+import styles from '../css/styles';
 
 const regDivStyle = {
     textAlign: 'center',
@@ -40,22 +19,12 @@ const buttonDivStyle = {
     width: '225px',
 };
 
-const pStyle = {
-    display: 'inline-block',
-    textAlign: 'center',
-    fontSize: '1.2em'
-};
-
-const rowDivStyle = {
-    align: 'left',
-};
-
 
 const Participate = () => (
-    <div style={parentDivStyle}>
-        <Card style={cardStyle}>
-            <p style={titleStyle}>Participate in GS8 Film Festival</p>
-            <p style={pStyle}>We are Glad you are here!</p>
+    <div style={styles.parentDivStyle}>
+        <Card style={styles.cardStyle}>
+            <p style={styles.titleStyle}>Participate in GS8 Film Festival</p>
+            <p style={styles.pStyle}>We are Glad you are here!</p>
             <div style={regDivStyle}>
                 <Button
                     size="large"
@@ -66,10 +35,7 @@ const Participate = () => (
                 </Button>
             </div>
 
-
-
-
-            <div style={rowDivStyle}>
+            <div style={styles.rowDivStyle}>
                 <div style={buttonDivStyle}>
                     <Button
                         size="large"
