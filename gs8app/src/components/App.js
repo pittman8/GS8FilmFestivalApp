@@ -18,12 +18,14 @@ import FilmmakerInfo from './Filmmaker-info';
 import Home from './Home';
 import AdminData from './AdminData';
 //fixed???
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 class App extends Component {
 
     render() {
         return (
             <div className="App">
+                <CssBaseline />
                 <Navbar />
                 <div id="contents">
                     <Switch>
@@ -43,7 +45,7 @@ class App extends Component {
                         <Route path="/" component={Home} />                        
                         <Redirect to="/" />
                     </Switch>
-                </div>
+                </div> <CssBaseline />
             </div>
         );
     }

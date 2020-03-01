@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
@@ -8,20 +7,9 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import IconButton from '@material-ui/core/IconButton';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import Styles from '../css/styles';
 
-class Navbar extends React.Component {    
-    useStyles = makeStyles(theme => ({
-        root: {
-            flexGrow: 1,
-        },
-        menuButton: {
-            marginRight: theme.spacing(2),
-        },
-        title: {
-            flexGrow: 1,
-        },
-    }));
-    
+class Navbar extends React.Component {        
     state = {
         anchorEl: null,
         homeDropMenuOpen: false,
@@ -159,8 +147,9 @@ class Navbar extends React.Component {
         );
 
         return (
-            <div className="navbar">
-                <AppBar position="static">
+            <div style={Styles.navbar}>
+                <AppBar
+                    position="static">
                     <Toolbar>
                         <Button
                             component={NavLink}
@@ -202,12 +191,3 @@ class Navbar extends React.Component {
 };   
 
 export default Navbar;
-
-/*
-<Button
-    component={NavLink}
-    to="/about"
->
-    About
-</Button>
-*/

@@ -34,6 +34,10 @@ const socMed = {
     margin: '0 auto'
 };
 
+const navbar = {
+    justifyContents: 'left'
+};
+
 const Styles = {
     parentDivStyle,
     cardStyle,
@@ -41,6 +45,7 @@ const Styles = {
     pStyle,
     divButtonStyle,
     socMed,
+    navbar,
 }
 
 export default Styles;
