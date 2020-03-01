@@ -3,8 +3,9 @@
     "",
     "\\src",
     "\\src\\api",
-    "\\src\\components"
+    "\\src\\components",
+    "\\src\\css"
   ],
-  "SelectedNode": "\\src\\components\\Filmmaker-info.js",
+  "SelectedNode": "\\src\\components\\Register.js",
   "PreviewInSolutionExplorer": false
 }

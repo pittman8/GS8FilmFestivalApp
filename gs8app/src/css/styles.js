@@ -7,13 +7,27 @@ const cardStyle = {
     width: '36em',
     textAlign: 'center',
     padding: '25px',
-    margine: '25px',
+    margin: '25px',
 };
 
 const h1Style = {
     fontWeight: 'bold',
     textAlign: 'justify',
     fontSize: '2.2em',
+    justifyContents: 'center'
+};
+
+const h2Style = {
+    fontWeight: 'bold',
+    textAlign: 'justify',
+    fontSize: '2em',
+    justifyContents: 'center'
+};
+
+const h3Style = {
+    fontWeight: 'bold',
+    textAlign: 'justify',
+    fontSize: '1.8em',
     justifyContents: 'center'
 };
 
@@ -26,7 +40,7 @@ const pStyle = {
 const divButtonStyle = {
     textAlign: 'center',
     padding: '25px',
-    margine: '25px',
+    margin: '25px',
 };
 
 const socMed = {
@@ -38,6 +52,8 @@ const Styles = {
     parentDivStyle,
     cardStyle,
     h1Style,
+    h2Style,
+    h3Style,
     pStyle,
     divButtonStyle,
     socMed,
