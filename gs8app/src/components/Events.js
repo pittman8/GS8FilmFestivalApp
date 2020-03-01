@@ -1,24 +1,19 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import Styles from '../css/styles';
+import Card from '@material-ui/core/Card';
 
 class Events extends React.Component {
-    useStyles = makeStyles({
-        root: {
-            maxWidth: 345,
-        },
-        media: {
-            height: 140,
-        },
-    });
-
     render() {
-        //const classes = this.useStyles();
+        return (
+            <div style={Styles.parentDivStyle}>
+                <Card style={Styles.cardStyle}>
+                    <p style={Styles.h1Style}>Look for GS8 2020 Events In January!</p>
 
-    return (
-        <div>
-            <h1>Look for GS8 2020 Events In January!</h1>
-            {/*<img src="../img/GS8projector.jpg" alt="GS8 Film projector" />*/}
-        </div>
+                    <Card style={Styles.cardStyle}>
+                        <img src={require('../img/GS8projector.jpg')} alt='Film Purchase 1' />
+                    </Card>
+                </Card>
+            </div>
         );
     }
 };
