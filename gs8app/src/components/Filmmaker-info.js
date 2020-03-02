@@ -1,6 +1,32 @@
 import React from 'react';
-import {Card, Button} from '@material-ui/core';
+import Button from '@material-ui/core/Button';
+import Card  from '@material-ui/core/Card';
 
+
+function Item(props)
+{
+    return (
+        <Card>
+            <h2>{props.item.name}</h2>
+            <p>{props.item.description}</p>
+ 
+            <Button className="CheckButton">
+                Check it out!
+            </Button>
+        </Card>
+    )
+}
+
+var items = [
+    {
+        name: "Random Name #1",
+        description: "Probably the most random thing you have ever seen!"
+    },
+    {
+        name: "Random Name #2",
+        description: "Hello World!"
+    }
+]
 
 const FilmmakerInfo = () => (
     <div>
@@ -96,6 +122,7 @@ const FilmmakerInfo = () => (
 
         <Card>
             <h3>How to make a Super 8 Film</h3>
+            
             <iframe title="How to make a Super 8 Film" width="690" height="388" src="https://www.youtube.com/embed/N7OCSw9w-IA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Card>
 
