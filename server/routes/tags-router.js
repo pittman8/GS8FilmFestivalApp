@@ -1,10 +1,10 @@
-const express = require('express')
+const express = require('express');
 
-const TagsCtrl = require('../controllers/tags-ctrl')
+const TagsCtrl = require('../controllers/tags-ctrl');
 
-const router = express.Router()
+const router = express.Router();
 
-router.get('/', TagsCtrl.ping)
-router.get('/tags', TagsCtrl.getTags)
+router.get('/', TagsCtrl.ping);
+router.get('/tags', TagsCtrl.getTags);
 
-module.exports = router
+module.exports = router;

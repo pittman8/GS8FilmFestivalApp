@@ -1,24 +1,24 @@
-const Tags = require('../models/tags-model')
+const Tags = require('../models/tags-model');
 
 ping = (req, res) => {
-    return res.json({ success: true, message: `Endpoint reached` })
-}
+    return res.json({ success: true, message: `Endpoint reached` });
+};
 
 getTags = async (req, res) => {
     console.log('##getTags()');
 
     await Tags.find({}, (err, Tags) => {
         if (err) {
-            return res.status(400).json({ success: false, error: err })
+            return res.status(400).json({ success: false, error: err });
         }
         if (!Tags.length) {
             return res
                 .status(404)
-                .json({ success: false, error: `Tags not found` })
+                .json({ success: false, error: `Tags not found` });
         }
-        return res.status(200).json({ success: true, data: Tags })
-    }).catch(err => console.log(err))
-}
+        return res.status(200).json({ success: true, data: Tags });
+    }).catch(err => console.log(err));
+};
 
 //createTag = (req, res) => {
 //    const body = req.body
@@ -125,17 +125,17 @@ getTags = async (req, res) => {
     console.log('##getTags()');
 
     await Tags.find({}, (err, Tags) => {
-    if (err) {
-        return res.status(400).json({ success: false, error: err })
-    }
-   if (!Tags.length) {
-        return res
-            .status(404)
-            .json({ success: false, error: `Tags not found` })
-    }
-    return res.status(200).json({ success: true, data: Tags })
-    }).catch(err => console.log(err))
-}
+        if (err) {
+            return res.status(400).json({ success: false, error: err });
+        }
+        if (!Tags.length) {
+            return res
+                .status(404)
+                .json({ success: false, error: `Tags not found` });
+        }
+        return res.status(200).json({ success: true, data: Tags });
+    }).catch(err => console.log(err));
+};
 
 module.exports = {
     //createTag,
@@ -143,5 +143,5 @@ module.exports = {
     //deleteTag,
     getTags,
     //getTagById,
-    ping,
-}
+    ping
+};
