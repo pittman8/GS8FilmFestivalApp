@@ -7,15 +7,20 @@ class Events extends React.Component {
         return (
             <div style={Styles.parentDivStyle}>
                 <Card style={Styles.cardStyle}>
-                    <p style={Styles.h1Style}>Look for GS8 2020 Events In January!</p>
+                    <p style={Styles.h1Style}>
+                        Look for GS8 2020 Events In January!
+                    </p>
 
                     <Card style={Styles.cardStyle}>
-                        <img src={require('../img/GS8projector.jpg')} alt='Film Purchase 1' />
+                        <img
+                            src={require('../img/GS8projector.jpg')}
+                            alt="Film Purchase 1"
+                        />
                     </Card>
                 </Card>
             </div>
         );
     }
-};
+}
 
 export default Events;
