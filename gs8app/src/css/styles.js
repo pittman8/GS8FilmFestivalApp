@@ -1,22 +1,23 @@
+
+
+
+
 const parentDivStyle = {
     textAlign: 'center',
     display: 'inline-block',
+    width: '48em',
 };
-
 const cardStyle = {
-    width: '36em',
+    width: '46em',
     textAlign: 'center',
     padding: '25px',
     margine: '25px',
 };
-
-const h1Style = {
+const titleStyle = {
     fontWeight: 'bold',
-    textAlign: 'justify',
-    fontSize: '2.2em',
-    justifyContents: 'center'
+    textAlign: 'center',
+    fontSize: '2.2em'
 };
-
 const pStyle = {
     display: 'inline-block',
     textAlign: 'justify',
@@ -34,12 +35,18 @@ const socMed = {
     margin: '0 auto'
 };
 
+const rowDivStyle = {
+    textAlign: 'left',
+    align: 'left',
+};
+
 const Styles = {
     parentDivStyle,
     cardStyle,
-    h1Style,
+    titleStyle,
     pStyle,
     divButtonStyle,
+    rowDivStyle,
     socMed,
 }
 

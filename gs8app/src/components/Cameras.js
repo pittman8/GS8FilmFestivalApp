@@ -1,15 +1,12 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
+import styles from '../css/styles';
 
-const parentDivStyle = {
+const cardCameraStyle = {
     textAlign: 'center',
-
-    display: 'inline-block',
-};
-
-const rowDivStyle = {
-    align: 'left',
+    padding: '15px 0px 0px 0px',
+    margine: '5px',
 };
 
 const colDivStyle = {
@@ -19,26 +16,13 @@ const colDivStyle = {
     width: '8em',
 };
 
-const cardStyle = {
-    textAlign: 'center',
-    padding: '15px 0px 0px 0px',
-    margine: '5px',
-};
-
-const h1Style = {
-    textAlign: 'center',
-    fontWeight: 'bold',
-    fontSize: '2.2em'
-};
-
-
 const Cameras = () => (
-    <div style={parentDivStyle}>
-        <h1 style={h1Style}>Camera Manuals</h1>
+    <div style={styles.parentDivStyle}>
+        <h1 style={styles.titleStyle}>Camera Manuals</h1>
         <div>
-            <div style={rowDivStyle}>
+            <div style={styles.rowDivStyle}>
                 <div style={colDivStyle}>
-                    <Card style={cardStyle}>
+                    <Card style={cardCameraStyle}>
                         <Button
                             href={require("../pdfManuals/bce5df_ce55933abdf744f6bb748555b90f811d.pdf")}
                         >
@@ -56,7 +40,7 @@ const Cameras = () => (
                     </Card>
                 </div>
                 <div style={colDivStyle}>
-                    <Card style={cardStyle}>
+                    <Card style={cardCameraStyle}>
                         <Button
                             href={require("../pdfManuals/bce5df_92e38c311f804f4eacc038bff8b7a4ce.pdf")}
                         >
@@ -74,7 +58,7 @@ const Cameras = () => (
                     </Card>
                 </div>
                 <div style={colDivStyle}>
-                    <Card style={cardStyle}>
+                    <Card style={cardCameraStyle}>
                         <Button
                             href={require("../pdfManuals/bce5df_07361c7023864924821c4cccb1d90dd5.pdf")}
                         >
@@ -91,7 +75,7 @@ const Cameras = () => (
                     </Card>
                 </div>
                 <div style={colDivStyle}>
-                    <Card style={cardStyle}>
+                    <Card style={cardCameraStyle}>
                         <Button
                             href={require("../pdfManuals/bce5df_cb61f2fa13d547708b9531dc112e92ab.pdf")}
                         >
@@ -108,7 +92,7 @@ const Cameras = () => (
                     </Card>
                 </div>
                 <div style={colDivStyle}>
-                    <Card style={cardStyle}>
+                    <Card style={cardCameraStyle}>
                         <Button
                             href={require("../pdfManuals/bce5df_39e9dcb4a9be48c59f952ea75dcfbb6f.pdf")}
                         >
@@ -126,9 +110,9 @@ const Cameras = () => (
                 </div>
             </div>
 
-            <div style={rowDivStyle}>
+            <div style={styles.rowDivStyle}>
                 <div style={colDivStyle}>
-                    <Card style={cardStyle}>
+                    <Card style={cardCameraStyle}>
                         <Button
                             href={require("../pdfManuals/bce5df_8efde7504d554109a1b1d15c8ed14b02.pdf")}
                         >
@@ -145,7 +129,7 @@ const Cameras = () => (
                     </Card>
                 </div>
                 <div style={colDivStyle}>
-                    <Card style={cardStyle}>
+                    <Card style={cardCameraStyle}>
                         <Button
                             href={require("../pdfManuals/bce5df_67bc1062faac4adba6bdd8a49ca9df60.pdf")}
                         >
@@ -162,7 +146,7 @@ const Cameras = () => (
                     </Card>
                 </div>
                 <div style={colDivStyle}>
-                    <Card style={cardStyle}>
+                    <Card style={cardCameraStyle}>
                         <Button
                             href={require("../pdfManuals/bce5df_1cc8729033534f91b4911975501d5879.pdf")}
                         >
@@ -179,7 +163,7 @@ const Cameras = () => (
                     </Card>
                 </div>
                 <div style={colDivStyle}>
-                    <Card style={cardStyle}>
+                    <Card style={cardCameraStyle}>
                         <Button
                             href={require("../pdfManuals/bce5df_1fbeb38d64694a359f93a0b415c4116e.pdf")}
                         >
@@ -196,7 +180,7 @@ const Cameras = () => (
                     </Card>
                 </div>
                 <div style={colDivStyle}>
-                    <Card style={cardStyle}>
+                    <Card style={cardCameraStyle}>
                         <Button
                             href={require("../pdfManuals/bce5df_8c81c45d345d46fcb1fe318bf295d0fa.pdf")}
                         >
@@ -214,9 +198,9 @@ const Cameras = () => (
                 </div>
             </div>
 
-            <div style={rowDivStyle}>
+            <div style={styles.rowDivStyle}>
                 <div style={colDivStyle}>
-                    <Card style={cardStyle}>
+                    <Card style={cardCameraStyle}>
                         <Button
                             href={require("../pdfManuals/bce5df_f7da7f9a9a0348e0ad0345bf7f710456.pdf")}
                         >
