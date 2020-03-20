@@ -36,9 +36,10 @@ const socMed = {
 };
 
 const rowDivStyle = {
-    textAlign: 'left',
-    align: 'left',
+    textAlign: 'center',
+    align: 'left'
 };
+
 
 const Styles = {
     parentDivStyle,

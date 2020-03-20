@@ -71,7 +71,7 @@ const Participate = () => (
                     </Button>
                 </div>
             </div>
-            <div>
+            <div style={styles.rowDivStyle}>
                 <div style={buttonDivStyle}>
                     <Button
                         size="large"
