@@ -1,2 +1,2 @@
-const YOUTUBE_API_KEY = 'well that didn\'t work';
+const YOUTUBE_API_KEY = 'NO NO NO!';
 module.exports = YOUTUBE_API_KEY;
