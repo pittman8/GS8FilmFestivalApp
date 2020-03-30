@@ -28,3 +28,4 @@ yarn-error.log*
 
 # Keys
 youTubeAPIkey.js
+youTubeOauthKey.js
