@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import api from '../api/index';
-import { useTable } from 'react-table'
+import { useTable } from 'react-table';
 
 class AdminData extends React.Component {
     constructor() {
@@ -9,92 +9,97 @@ class AdminData extends React.Component {
         this.state = {
             tags: [],
             columns: [],
-            isLoading: false,
-        }
+            isLoading: false
+        };
     }
-
 
     getTags = async () => {
         console.log('clicked getTags');
-        this.setState({ isLoading: true })
+        this.setState({ isLoading: true });
 
         await api.getTags().then(result => {
             this.setState({
                 tags: result.data.data,
-                isLoading: false,
-            })
-        })
-    }
+                isLoading: false
+            });
+        });
+    };
 
     Table({ columns, data }) {
-    // Use the state and functions returned from useTable to build your UI
-    const {
-        getTableProps,
-        getTableBodyProps,
-        headerGroups,
-        rows,
-        prepareRow,
-    } = useTable({
-        columns,
-        data,
-    })
+        // Use the state and functions returned from useTable to build your UI
+        const {
+            getTableProps,
+            getTableBodyProps,
+            headerGroups,
+            rows,
+            prepareRow
+        } = useTable({
+            columns,
+            data
+        });
 
-    // Render the UI for your table
-    return (
-        <table {...getTableProps()}>
-            <thead>
-                {headerGroups.map(headerGroup => (
-                    <tr {...headerGroup.getHeaderGroupProps()}>
-                        {headerGroup.headers.map(column => (
-                            <th {...column.getHeaderProps()}>{column.render('Header')}</th>
-                        ))}
-                    </tr>
-                ))}
-            </thead>
-            <tbody {...getTableBodyProps()}>
-                {rows.map((row, i) => {
-                    prepareRow(row)
-                    return (
-                        <tr {...row.getRowProps()}>
-                            {row.cells.map(cell => {
-                                return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
-                            })}
+        // Render the UI for your table
+        return (
+            <table {...getTableProps()}>
+                <thead>
+                    {headerGroups.map(headerGroup => (
+                        <tr {...headerGroup.getHeaderGroupProps()}>
+                            {headerGroup.headers.map(column => (
+                                <th {...column.getHeaderProps()}>
+                                    {column.render('Header')}
+                                </th>
+                            ))}
                         </tr>
-                    )
-                })}
-            </tbody>
-        </table>
-    )
-}
+                    ))}
+                </thead>
+                <tbody {...getTableBodyProps()}>
+                    {rows.map((row, i) => {
+                        prepareRow(row);
+                        return (
+                            <tr {...row.getRowProps()}>
+                                {row.cells.map(cell => {
+                                    return (
+                                        <td {...cell.getCellProps()}>
+                                            {cell.render('Cell')}
+                                        </td>
+                                    );
+                                })}
+                            </tr>
+                        );
+                    })}
+                </tbody>
+            </table>
+        );
+    }
 
     render() {
         //const classes = this.useStyles();
-        const { isLoading, tags } = this.state
+        const { isLoading, tags } = this.state;
 
         const columns = [
             {
                 Header: 'ID',
                 accessor: '_id',
-                filterable: true,
+                filterable: true
             },
             {
                 Header: 'Tag',
                 accessor: 'tag',
-                filterable: true,
+                filterable: true
             }
-        ]
+        ];
 
-        let showTable = true
+        let showTable = true;
         if (!tags.length) {
-            showTable = false
+            showTable = false;
         }
 
         return (
             <div>
-                <h1>DB Test Page</h1>     
-                <Button variant="contained"
-                    onClick={this.getTags}
-                >ShowTags</Button>
+                <h1>DB Test Page</h1>
+                <Button variant="contained" onClick={this.getTags}>
+                    ShowTags
+                </Button>
                 {showTable && (
                     <this.Table
                         data={tags}
@@ -108,6 +113,6 @@ class AdminData extends React.Component {
             </div>
         );
     }
-};
+}
 
 export default AdminData;
