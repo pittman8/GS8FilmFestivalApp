@@ -12,7 +12,7 @@ const imgStyle = {
 
 const Home = () => (
     <div style={styles.parentDivStyle}>
-        <img 
+        <img
             src={require('../img/MyPost.jpg')}
             alt="The Georgetown Super 8 Film Festival logo"
             style={imgStyle}
@@ -26,16 +26,19 @@ const Home = () => (
                 Cardersity of community voices can define, document, and tell
                 the story of their neighborhood.
             </p>
-            <Button variant="contained" style={styles.divButtonStyle}>Learn More</Button>
+            <Button variant="contained" style={styles.divButtonStyle}>
+                Learn More
+            </Button>
         </Card>
         <Contact />
-        <Card style={styles.cardStyle} >
+        <Card style={styles.cardStyle}>
             <p>Missing banner image</p>
             <h2 style={styles.titleStyle}>Thankyou to our 2019 Donors</h2>
-            <img src=
-            {require('../img/2018sponsors.jpg')} 
-            alt="2018 sponsors" 
-            style={imgStyle} />
+            <img
+                src={require('../img/2018sponsors.jpg')}
+                alt="2018 sponsors"
+                style={imgStyle}
+            />
         </Card>
         <p>Map goes here</p>
         {/* API key AIzaSyDizypkVSGXwtOacsa73GX0DcqSE6l5KAg  */}
