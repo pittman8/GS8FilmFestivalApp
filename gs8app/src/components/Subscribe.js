@@ -12,27 +12,40 @@ import Styles from '../css/styles';
 class Subscribe extends React.Component {
     btn_subscribe = () => {
         let email = '';
-        email = document.getElementById("email").value; 
+        email = document.getElementById('email').value;
         console.log('subscribe: ' + email);
-    }
+    };
 
     render() {
         return (
             <div style={Styles.parentDivStyle}>
-                <Card style={Styles.cardStyle}>  
+                <Card style={Styles.cardStyle}>
                     <div>
                         <p style={Styles.h1Style}>Subscribe</p>
                         <form noValidate autoComplete="off">
-                            <TextField id="email" label="E-mail" variant="outlined" /><br />
+                            <TextField
+                                id="email"
+                                label="E-mail"
+                                variant="outlined"
+                            />
+                            <br />
                             <div style={Styles.divButtonStyle}>
-                                <Button variant="contained" onClick={this.btn_subscribe}>Subscribe</Button>
+                                <Button
+                                    variant="contained"
+                                    onClick={this.btn_subscribe}
+                                >
+                                    Subscribe
+                                </Button>
                             </div>
                         </form>
                     </div>
 
                     <div>
                         <CardActions>
-                            <a href='https://www.facebook.com/GeorgetownSuper8/' target="_blank">
+                            <a
+                                href="https://www.facebook.com/GeorgetownSuper8/"
+                                target="_blank"
+                            >
                                 <IconButton>
                                     <FacebookIcon style={Styles.socMed} />
                                 </IconButton>
@@ -41,8 +54,8 @@ class Subscribe extends React.Component {
                     </div>
                 </Card>
             </div>
-         );
+        );
     }
-};
+}
 
 export default Subscribe;

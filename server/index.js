@@ -17,16 +17,15 @@ console.log('##Launching GS8 server');
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send('Hello World!');
 });
 
-
 app.get('/contact', (req, res) => {
-    res.send('Hello World!')
+    res.send('Hello World!');
 });
 
 app.get('/subscribe', (req, res) => {
-    res.send('Hello World!')
+    res.send('Hello World!');
 });
 
 //to be handled by other sources

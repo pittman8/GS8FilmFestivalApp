@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom';
 import 'typeface-roboto';
 import '../css/App.css';
 import Navbar from './Navbar';
@@ -20,7 +20,6 @@ import AdminData from './AdminData';
 //fixed???
 
 class App extends Component {
-
     render() {
         return (
             <div className="App">
@@ -34,13 +33,16 @@ class App extends Component {
                         <Route path="/events" component={Events} />
                         <Route path="/participate" component={Participate} />
                         <Route path="/cameras" component={Cameras} />
-                        <Route path="/filmmaker-info" component={FilmmakerInfo} />
+                        <Route
+                            path="/filmmaker-info"
+                            component={FilmmakerInfo}
+                        />
                         <Route path="/deadlines" component={Deadlines} />
                         <Route path="/register" component={Register} />
                         <Route path="/rules" component={Rules} />
                         <Route path="/shop" component={Shop} />
                         <Route path="/subscribe" component={Subscribe} />
-                        <Route path="/" component={Home} />                        
+                        <Route path="/" component={Home} />
                         <Redirect to="/" />
                     </Switch>
                 </div>
