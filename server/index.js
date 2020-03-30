@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const ytKey = require('./youTubeAPIkey'); // See the "Accounts & Links" doc in the gs8 shared drive for instructions.
+const ytOauth = require('./youTubeOauthKey'); // See the "Accounts & Links" doc in the gs8 shared drive for instructions.
 
 const db = require('./db');
 const tagsRouter = require('./routes/tags-router');
@@ -18,6 +19,10 @@ console.log('##Launching GS8 server');
 // See the "Accounts & Links" doc in the gs8 shared drive for instructions.
 if(ytKey){
     console.log('Youtube API Key: Loaded');
+}
+// See the "Accounts & Links" doc in the gs8 shared drive for instructions.
+if(ytOauth){
+    console.log('Youtube Oauth API Key: Loaded');
 }
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
