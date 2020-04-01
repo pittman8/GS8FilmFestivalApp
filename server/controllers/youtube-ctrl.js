@@ -1,9 +1,8 @@
-const Tags = require('../models/tags-model')
+//const Tags = require('../models/tags-model')
 
 ping = (req, res) => {
     return res.json({ success: true, message: `Endpoint reached` })
 };
-
 
 
 //createTag = (req, res) => {
@@ -106,7 +105,7 @@ ping = (req, res) => {
 //        return res.status(200).json({ success: true, data: tag })
 //    }).catch(err => console.log(err))
 //}
-
+/*
 getTags = async (req, res) => {
     console.log('##getTags()');
 
@@ -122,13 +121,12 @@ getTags = async (req, res) => {
         return res.status(200).json({ success: true, data: Tags })
     }).catch(err => console.log(err))
 };
-
-
+*/
 module.exports = {
     //createTag,
     //updateTag,
     //deleteTag,
-    getTags,
+    //getTags,
     //getTagById,
     ping,
 };

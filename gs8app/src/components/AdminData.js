@@ -26,6 +26,18 @@ class AdminData extends React.Component {
         })
     }
 
+    getYoutube = async () => {
+        console.log('clicked getYoutube');
+        this.setState({ isLoading: true })
+
+        await api.getTags().then(result => {
+            this.setState({
+                tags: result.data.data,
+                isLoading: false,
+            })
+        })
+    }
+
     Table({ columns, data }) {
     // Use the state and functions returned from useTable to build your UI
     const {
@@ -95,6 +107,10 @@ class AdminData extends React.Component {
                 <Button variant="contained"
                     onClick={this.getTags}
                 >ShowTags</Button>
+
+                <Button variant="contained"
+                        onClick={this.getYoutube}
+                >Ping Youtube</Button>
                 {showTable && (
                     <this.Table
                         data={tags}
