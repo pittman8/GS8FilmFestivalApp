@@ -9,6 +9,7 @@ class AdminData extends React.Component {
         this.state = {
             tags: [],
             columns: [],
+            youtubeTEST: "",
             isLoading: false,
         }
     }
@@ -19,6 +20,7 @@ class AdminData extends React.Component {
         this.setState({ isLoading: true })
 
         await api.getTags().then(result => {
+            console.log(result.data.data);
             this.setState({
                 tags: result.data.data,
                 isLoading: false,
@@ -28,15 +30,16 @@ class AdminData extends React.Component {
 
     getYoutube = async () => {
         console.log('clicked getYoutube');
-        this.setState({ isLoading: true })
+        this.setState({ isLoading: true });
 
-        await api.getTags().then(result => {
+        await api.getYoutube().then(result => {
+            console.log(result.data.data);
             this.setState({
                 tags: result.data.data,
                 isLoading: false,
             })
         })
-    }
+    };
 
     Table({ columns, data }) {
     // Use the state and functions returned from useTable to build your UI

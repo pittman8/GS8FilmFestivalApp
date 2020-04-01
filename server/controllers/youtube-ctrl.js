@@ -1,7 +1,7 @@
 //const Tags = require('../models/tags-model')
 
 ping = (req, res) => {
-    return res.json({ success: true, message: `Endpoint reached` })
+    return res.json({ success: true, data: [{ _id: "youtube: ", tag: "pinged" }] })
 };
 
 
