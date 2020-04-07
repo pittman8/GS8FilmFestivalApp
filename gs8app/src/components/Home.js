@@ -18,6 +18,91 @@ const Home = () => (
             style={imgStyle}
         />
         <h1>Thank you for making GS8 2019 a Success!</h1>
+
+        <h1>Video Archive 2019</h1>
+        <div className="vid-container">
+            <iframe id="vid_frame" src="http://www.youtube.com/embed/QtC3Bo9B0yI?rel=0&showinfo=0&autohide=1" frameborder="0" width="560" height="315"></iframe>
+        </div>
+
+        <div className = "vid-list-container">
+            <div className = "vid-list">
+                <div className="vid-item"
+                     onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/QtC3Bo9B0yI'">
+                    <div className="thumb">
+                        <img src="http://img.youtube.com/vi/QtC3Bo9B0yI/0.jpg" alt=""/>
+                    </div>
+                    <div className="desc">
+                        THE BEST CUTE AND FUNNY CAT VIDEOS OF 2019!
+                    </div>
+                </div>
+                <div className="vid-item"
+                     onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/AcL0MeVZIxM'">
+                    <div className="thumb">
+                        <img src="http://img.youtube.com/vi/AcL0MeVZIxM/0.jpg" alt=""/>
+                    </div>
+                    <div className="desc">
+                        Try Not To Laugh At This Ultimate Funny Dog Video Compilation
+                    </div>
+                </div>
+                <div className="vid-item"
+                     onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/eg6kNoJmzkY?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                    <div className="thumb"><img src="http://img.youtube.com/vi/eg6kNoJmzkY/0.jpg"></img></div>
+                    <div className="desc">Jessica Hernandez & the Deltas - Dead Brains</div>
+                </div>
+
+                <div className="vid-item"
+                     onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/_Tz7KROhuAw?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                    <div className="thumb"><img src="http://img.youtube.com/vi/_Tz7KROhuAw/0.jpg"></img></div>
+                    <div className="desc">Barbatuques - CD Tum P&aacute; - Sambalel&ecirc;</div>
+                </div>
+
+                <div className="vid-item"
+                     onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/F1f-gn_mG8M?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                    <div className="thumb"><img src="http://img.youtube.com/vi/F1f-gn_mG8M/0.jpg"></img></div>
+                    <div className="desc">Eleanor Turner plays Baroque Flamenco</div>
+                </div>
+
+                <div className="vid-item"
+                     onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/fB8UTheTR7s?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                    <div className="thumb"><img src="http://img.youtube.com/vi/fB8UTheTR7s/0.jpg"></img></div>
+                    <div className="desc">Sleepy Man Banjo Boys: Bluegrass</div>
+                </div>
+
+                <div className="vid-item"
+                     onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/0SNhAKyXtC8?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                    <div className="thumb"><img src="http://img.youtube.com/vi/0SNhAKyXtC8/0.jpg"></img></div>
+                    <div className="desc">Edmar Castaneda: NPR Music Tiny Desk Concert</div>
+                </div>
+
+                <div className="vid-item"
+                     onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/RTHI_uGyfTM?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                    <div className="thumb"><img src="http://img.youtube.com/vi/RTHI_uGyfTM/0.jpg"></img></div>
+                    <div className="desc">Winter Harp performs Caravan</div>
+                </div>
+
+                <div className="vid-item"
+                     onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/abQRt6p8T7g?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                    <div className="thumb"><img src="http://img.youtube.com/vi/abQRt6p8T7g/0.jpg"></img></div>
+                    <div className="desc">The Avett Brothers Tiny Desk Concert</div>
+                </div>
+
+                <div className="vid-item"
+                     onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/fpmN9JorFew?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                    <div className="thumb"><img src="http://img.youtube.com/vi/fpmN9JorFew/0.jpg"></img></div>
+                    <div className="desc">Tracy Chapman - Give Me One Reason</div>
+                </div>
+            </div>
+        </div>
+
+        <div className="arrows">
+            <div className="arrow-left">
+                &#8678;
+            </div>
+            <div className="arrow-right">
+                &#8680;
+            </div>
+        </div>
+
         <Card style={styles.cardStyle}>
             <h2>Little Films for the Big Picture</h2>
             <p style={styles.pStyle}>
@@ -33,7 +118,7 @@ const Home = () => (
         <Contact />
         <Card style={styles.cardStyle}>
             <p>Missing banner image</p>
-            <h2 style={styles.titleStyle}>Thankyou to our 2019 Donors</h2>
+            <h2 style={styles.titleStyle}>Thank you to our 2019 Donors</h2>
             <img
                 src={require('../img/2018sponsors.jpg')}
                 alt="2018 sponsors"
