@@ -1,9 +1,40 @@
 import React from 'react';
 import { Card, Button } from '@material-ui/core';
+import Slideshow from './Slideshow';
+import styles from '../css/styles';
+
+const columnLeftStyle = {
+    float: 'left',
+    padding: '25px',
+    width: '45%'
+};
+
+const columnRightStyle = {
+    float: 'right',
+    padding: '25px',
+    width: '45%'
+};
+
+const divStyle = {
+    textAlign: 'center',
+    display: 'inline-block',
+    width: '85%'
+};
+
+const headerStyle = {
+    textAlign: 'center',
+    display: 'inline-block',
+    width: '90%'
+};
+
+const titleStyle = {
+    fontWeight: 'bold',
+    textAlign: 'center'
+};
 
 const FilmmakerInfo = () => (
     <div>
-        <Card>
+        <Card style={headerStyle}>
             <Button
                 size="large"
                 color="primary"
@@ -62,7 +93,7 @@ const FilmmakerInfo = () => (
             </Button>
         </Card>
 
-        <Card>
+        <Card style={divStyle}>
             <h3>
                 <b>
                     <u>
@@ -145,30 +176,24 @@ const FilmmakerInfo = () => (
             <h4>All film due March 22nd</h4>
         </Card>
 
-        <Card>
+        <Card style={divStyle}>
             <h3>How to make a Super 8 Film</h3>
-            <iframe
-                title="How to make a Super 8 Film"
-                width="690"
-                height="388"
-                src="https://www.youtube.com/embed/N7OCSw9w-IA"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-            ></iframe>
+            <Slideshow />
         </Card>
 
         <Card id="cameras">
             <h3>Cameras</h3>
-            <iframe
-                title="Cameras"
-                width="980"
-                height="551"
-                src="https://www.youtube.com/embed/BqLx6dyzVO0"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-            ></iframe>
+            <div>
+                <iframe
+                    title="Cameras"
+                    display="block"
+                    width="100%"
+                    src="https://www.youtube.com/embed/BqLx6dyzVO0"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </div>
         </Card>
 
         <Card id="links">

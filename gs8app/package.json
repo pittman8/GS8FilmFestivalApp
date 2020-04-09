@@ -2,7 +2,7 @@
   "name": "gs8app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001",
+  "proxy": "http://localhost:30025",
   "dependencies": {
     "@material-ui/core": "^4.9.2",
     "@material-ui/icons": "^4.9.1",
@@ -16,6 +16,7 @@
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
+    "react-slideshow-image": "^1.4.0",
     "react-table": "^7.0.0-rc.16",
     "typeface-roboto": "0.0.75"
   },
