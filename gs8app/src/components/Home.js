@@ -27,7 +27,7 @@ const Home = () => (
         <div className = "vid-list-container">
             <div className = "vid-list">
                 <div className="vid-item"
-                     onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/QtC3Bo9B0yI'">
+                     onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/QtC3Bo9B0yI?autoplay=1&rel=0&showinfo=0&autohide=1'">
                     <div className="thumb">
                         <img src="http://img.youtube.com/vi/QtC3Bo9B0yI/0.jpg" alt=""/>
                     </div>
@@ -36,7 +36,7 @@ const Home = () => (
                     </div>
                 </div>
                 <div className="vid-item"
-                     onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/AcL0MeVZIxM'">
+                     onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/AcL0MeVZIxM?autoplay=1&rel=0&showinfo=0&autohide=1'">
                     <div className="thumb">
                         <img src="http://img.youtube.com/vi/AcL0MeVZIxM/0.jpg" alt=""/>
                     </div>
