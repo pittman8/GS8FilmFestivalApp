@@ -7,6 +7,6 @@ const router = express.Router();
 //router.get('/', TagsCtrl.ping);
 //router.get('/tags', TagsCtrl.getTags);
 router.get('/', YoutubeCtrl.ping);
-//router.get('/tags', YoutubeCtrl.getTags);
+router.get('/youtubeVideoInfo', YoutubeCtrl.getVideoInfo);
 
 module.exports = router;

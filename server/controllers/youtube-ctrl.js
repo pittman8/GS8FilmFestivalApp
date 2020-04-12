@@ -122,6 +122,24 @@ getTags = async (req, res) => {
     }).catch(err => console.log(err))
 };
 */
+
+getVideoInfo = async (req, res) => {
+    console.log('##getVideoInfo()');
+
+    await Tags.find({}, (err, Tags) => {
+        if (err) {
+            return res.status(400).json({ success: false, error: err })
+        }
+        if (!Tags.length) {
+            return res
+                .status(404)
+                .json({ success: false, error: `Tags not found` })
+        }
+        return res.status(200).json({ success: true, data: Tags })
+    }).catch(err => console.log(err))
+};
+
+
 module.exports = {
     //createTag,
     //updateTag,
