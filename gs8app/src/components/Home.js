@@ -15,13 +15,6 @@ let carouselWidthCalculated = '1680px';
 //'1680px' Each video thumb img is 168px wide so 168x10=1680px.
 // When we pull data from the DB we need to calculate this number and added it to the carouse width: ****px
 
-let leftArrow = () => {
-
-};
-let rightArrow = () => {
-
-};
-
 
 const Home = () => (
     <div style={styles.parentDivStyle}>
