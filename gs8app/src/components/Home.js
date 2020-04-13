@@ -11,10 +11,9 @@ const imgStyle = {
     height: 'auto'
 };
 
-let carouselWidthCalculated = '1680px';
+styles.vidList.width = '1680px';
 //'1680px' Each video thumb img is 168px wide so 168x10=1680px.
-// When we pull data from the DB we need to calculate this number and added it to the carouse width: ****px
-let scrolLeftPos = true;
+// When we pull data from the DB we need to calculate this number and set the carouse styles.vidList.width: ****px
 
 const Home = () => (
     <div style={styles.parentDivStyle}>
@@ -38,7 +37,7 @@ const Home = () => (
         </div>
 
         <div className = "vid-list-container" style={styles.vidListContainer}>
-            <div className = "vid-list" style={styles.vidList} style={{width: carouselWidthCalculated}}>
+            <div className = "vid-list" style={styles.vidList}>
 
                 <div className="vid-item"
                      style={styles.vidItem}
@@ -135,7 +134,6 @@ const Home = () => (
         <div className="arrows">
             <div className="arrow-left"
                 onClick={() => {
-                    console.log('<-- scrole left');
                     $(".vid-list-container").stop().animate({
                         scrollLeft: "-=672"
                     }, 750);
@@ -144,7 +142,6 @@ const Home = () => (
             </div>
             <div className="arrow-right"
                  onClick={() => {
-                     console.log('scrole right -->');
                      $(".vid-list-container").stop().animate({
                          //scrollLeft: "+=1512"
                          scrollLeft: "+=672"
