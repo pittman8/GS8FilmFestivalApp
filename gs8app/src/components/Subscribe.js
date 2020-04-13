@@ -4,7 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import IconButton from '@material-ui/core/IconButton';
-import Link from '@material-ui/core/Link';
+//import Link from '@material-ui/core/Link';
 import CardActions from '@material-ui/core/CardActions';
 
 import Styles from '../css/styles';
@@ -45,6 +45,7 @@ class Subscribe extends React.Component {
                             <a
                                 href="https://www.facebook.com/GeorgetownSuper8/"
                                 target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 <IconButton>
                                     <FacebookIcon style={Styles.socMed} />
