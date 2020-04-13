@@ -1,17 +1,13 @@
-
-
-
-
 const parentDivStyle = {
     textAlign: 'center',
     display: 'inline-block',
-    width: '48em',
+    width: '48em'
 };
 const cardStyle = {
     width: '46em',
     textAlign: 'center',
     padding: '25px',
-    margine: '25px',
+    margine: '25px'
 };
 const titleStyle = {
     fontWeight: 'bold',
@@ -27,7 +23,7 @@ const pStyle = {
 const divButtonStyle = {
     textAlign: 'center',
     padding: '25px',
-    margine: '25px',
+    margine: '25px'
 };
 
 const socMed = {
@@ -48,7 +44,7 @@ const Styles = {
     pStyle,
     divButtonStyle,
     rowDivStyle,
-    socMed,
-}
+    socMed
+};
 
 export default Styles;

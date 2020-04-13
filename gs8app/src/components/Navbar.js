@@ -9,27 +9,30 @@ import MenuItem from '@material-ui/core/MenuItem';
 import IconButton from '@material-ui/core/IconButton';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
-class Navbar extends React.Component {    
+class Navbar extends React.Component {
     useStyles = makeStyles(theme => ({
         root: {
-            flexGrow: 1,
+            flexGrow: 1
         },
         menuButton: {
-            marginRight: theme.spacing(2),
+            marginRight: theme.spacing(2)
         },
         title: {
-            flexGrow: 1,
-        },
+            flexGrow: 1
+        }
     }));
-    
+
     state = {
         anchorEl: null,
         homeDropMenuOpen: false,
-        participateDropMenuOpen: false,
+        participateDropMenuOpen: false
     };
 
     handleHomeClick = event => {
-        this.setState({ homeDropMenuOpen: true, anchorEl: event.currentTarget });
+        this.setState({
+            homeDropMenuOpen: true,
+            anchorEl: event.currentTarget
+        });
     };
 
     handleHomeRequestClose = () => {
@@ -37,7 +40,10 @@ class Navbar extends React.Component {
     };
 
     handleParticipateClick = event => {
-        this.setState({ participateDropMenuOpen: true, anchorEl: event.currentTarget });
+        this.setState({
+            participateDropMenuOpen: true,
+            anchorEl: event.currentTarget
+        });
     };
 
     handleParticipateRequestClose = () => {
@@ -86,7 +92,11 @@ class Navbar extends React.Component {
             <span>
                 <Button
                     aria-controls="menu-participate"
-                    aria-owns={this.state.participateDropMenuOpen ? 'menu-participate' : null}
+                    aria-owns={
+                        this.state.participateDropMenuOpen
+                            ? 'menu-participate'
+                            : null
+                    }
                     aria-haspopup="true"
                     onClick={this.handleParticipateClick}
                     onMouseOver={this.handleParticipateClick}
@@ -111,7 +121,6 @@ class Navbar extends React.Component {
                     </MenuItem>
                     <MenuItem
                         component={NavLink}
-
                         to="/deadlines"
                         onClick={this.handleParticipateRequestClose}
                     >
@@ -119,7 +128,6 @@ class Navbar extends React.Component {
                     </MenuItem>
                     <MenuItem
                         component={NavLink}
-
                         to="/register"
                         onClick={this.handleParticipateRequestClose}
                     >
@@ -142,7 +150,6 @@ class Navbar extends React.Component {
                     <MenuItem
                         component={NavLink}
                         to="/rules"
-
                         onClick={this.handleParticipateRequestClose}
                     >
                         Rules
@@ -162,44 +169,29 @@ class Navbar extends React.Component {
             <div className="navbar">
                 <AppBar position="static">
                     <Toolbar>
-                        <Button
-                            component={NavLink}
-                            to="/admin-data"
-                        >
+                        <Button component={NavLink} to="/admin-data">
                             AdminData
                         </Button>
                         {menuHome}
-                        <Button
-                            component={NavLink}
-                            to="/events"
-                        >
+                        <Button component={NavLink} to="/events">
                             GS8 Film Screening Events
                         </Button>
                         {menuParticipate}
-                        <Button
-                            component={NavLink}
-                            to="/contact"
-                        >
+                        <Button component={NavLink} to="/contact">
                             Contact
                         </Button>
-                        <Button
-                            component={NavLink}
-                            to="/donate"
-                        >
+                        <Button component={NavLink} to="/donate">
                             Donate
                         </Button>
-                        <IconButton
-                            component={NavLink}
-                            to="/shop"
-                        >
+                        <IconButton component={NavLink} to="/shop">
                             <ShoppingCartIcon />
-                        </IconButton>                        
+                        </IconButton>
                     </Toolbar>
                 </AppBar>
             </div>
         );
     }
-};   
+}
 
 export default Navbar;
 

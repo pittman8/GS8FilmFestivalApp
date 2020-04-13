@@ -6,7 +6,7 @@ import styles from '../css/styles';
 const regDivStyle = {
     textAlign: 'center',
     margin: '10px 0px',
-    padding: '5px',
+    padding: '5px'
 };
 
 const buttonDivStyle = {
@@ -16,9 +16,8 @@ const buttonDivStyle = {
     padding: '5px',
     margine: '15px',
     margin: '10px 0px',
-    width: '225px',
+    width: '225px'
 };
-
 
 const Participate = () => (
     <div style={styles.parentDivStyle}>
@@ -26,12 +25,10 @@ const Participate = () => (
             <p style={styles.titleStyle}>Participate in GS8 Film Festival</p>
             <p style={styles.pStyle}>We are Glad you are here!</p>
             <div style={regDivStyle}>
-                <Button
-                    size="large"
-                    variant="contained"
-                    href="/Register"
-                >
-                    Registration<br/>Start Here
+                <Button size="large" variant="contained" href="/Register">
+                    Registration
+                    <br />
+                    Start Here
                 </Button>
             </div>
 
@@ -42,7 +39,7 @@ const Participate = () => (
                         color="primary"
                         variant="contained"
                         href="/Deadlines"
-                        fullWidth='true'
+                        fullWidth="true"
                     >
                         Deadlines & Events
                     </Button>
@@ -54,7 +51,7 @@ const Participate = () => (
                         color="primary"
                         variant="contained"
                         href="/Shop"
-                        fullWidth='true'
+                        fullWidth="true"
                     >
                         Film Purchase
                     </Button>
@@ -65,7 +62,7 @@ const Participate = () => (
                         color="primary"
                         variant="contained"
                         href="/Filmmaker-info"
-                        fullWidth='true'
+                        fullWidth="true"
                     >
                         Filmmaker Info
                     </Button>
@@ -78,7 +75,7 @@ const Participate = () => (
                         color="primary"
                         variant="contained"
                         href="/Contact"
-                        fullWidth='true'
+                        fullWidth="true"
                     >
                         Contact
                     </Button>
@@ -89,7 +86,7 @@ const Participate = () => (
                         color="primary"
                         variant="contained"
                         href="/Rules"
-                        fullWidth='true'
+                        fullWidth="true"
                     >
                         Rules
                     </Button>
@@ -100,13 +97,12 @@ const Participate = () => (
                         color="primary"
                         variant="contained"
                         href="/Donate"
-                        fullWidth='true'
+                        fullWidth="true"
                     >
                         Donate
                     </Button>
                 </div>
             </div>
-
         </Card>
     </div>
 );
