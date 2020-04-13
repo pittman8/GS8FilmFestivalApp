@@ -4,13 +4,24 @@ import Card from '@material-ui/core/Card';
 import Contact from './Contact';
 import Subscribe from './Subscribe';
 import styles from '../css/styles';
+import $ from 'jquery';
 
 const imgStyle = {
     maxWidth: '100%',
     height: 'auto'
 };
 
-let carouselWidthCalculated = '1680px';//'1680px' Each video thumb img is 168px wide so 168x10=1680px. When we pull data from the DB we need to calculate this  number and added it to the carsouel
+let carouselWidthCalculated = '1680px';
+//'1680px' Each video thumb img is 168px wide so 168x10=1680px.
+// When we pull data from the DB we need to calculate this number and added it to the carouse width: ****px
+
+let leftArrow = () => {
+
+};
+let rightArrow = () => {
+
+};
+
 
 const Home = () => (
     <div style={styles.parentDivStyle}>
@@ -34,7 +45,7 @@ const Home = () => (
         </div>
 
         <div className = "vid-list-container" style={styles.vidListContainer}>
-            <div className = "vid-list" style={styles.vidList} style={{width:carouselWidthCalculated}}>
+            <div className = "vid-list" style={styles.vidList} style={{width: carouselWidthCalculated}}>
 
                 <div className="vid-item"
                      style={styles.vidItem}
@@ -129,11 +140,27 @@ const Home = () => (
         </div>
 
         <div className="arrows">
-            <div className="arrow-left">
+            <div className="arrow-left"
+                onClick={
+                    $(".arrow-left").bind("click", function (event) {
+                        event.preventDefault();
+                        $(".vid-list-container").stop().animate({
+                            scrollLeft: "-=336"
+                        }, 750);
+                    })
+                }>
                 &#8678;
             </div>
-            <div className="arrow-right">
-            &#8680;
+            <div className="arrow-right"
+                 onClick={
+                     $(".arrow-right").bind("click", function (event) {
+                         event.preventDefault();
+                         $(".vid-list-container").stop().animate({
+                             scrollLeft: "+=336"
+                         }, 750);
+                     })
+                 }>
+                &#8680;
             </div>
         </div>
 
