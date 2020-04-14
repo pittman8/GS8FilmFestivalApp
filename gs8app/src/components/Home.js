@@ -41,7 +41,8 @@ const Home = () => (
             />
         </Card>
         <p>Map goes here</p>
-        {/* API key AIzaSyDizypkVSGXwtOacsa73GX0DcqSE6l5KAg  */}
+
+
 
         <Subscribe />
     </div>
