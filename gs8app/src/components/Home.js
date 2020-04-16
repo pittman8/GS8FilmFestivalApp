@@ -6,6 +6,7 @@ import Subscribe from './Subscribe';
 import styles from '../css/styles';
 import $ from 'jquery';
 
+
 const imgStyle = {
     maxWidth: '100%',
     height: 'auto'
