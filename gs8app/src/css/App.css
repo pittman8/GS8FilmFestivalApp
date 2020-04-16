@@ -54,12 +54,20 @@
   height: 100%;
 }
 
-.vid-list-container {
+.vid-list-container1 {
   width: 92%;
   overflow: hidden;
   margin-top: 20px;
   margin-left:4%;
   padding-bottom: 20px;
+}
+
+.vid-list-container {
+    width: 92%;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-left:4%;
+    padding-bottom: 20px;
 }
 
 .vid-list {
