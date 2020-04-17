@@ -96,7 +96,13 @@ const vidItem = {
 
 const thumb = {
     overflow:'hidden',
-    height: '84px',
+    height: '110px',
+    //width: '120px',
+    //margin: 'auto',
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
 };
 
 const thumbImg = {

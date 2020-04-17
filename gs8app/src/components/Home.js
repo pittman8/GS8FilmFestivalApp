@@ -6,6 +6,18 @@ import Subscribe from './Subscribe';
 import styles from '../css/styles';
 import $ from 'jquery';
 
+import 'pure-react-carousel/dist/react-carousel.es.css';
+import {
+    ButtonBack,
+    ButtonNext,
+    CarouselProvider,
+    DotGroup,
+    Image,
+    Slide,
+    Slider,
+} from 'pure-react-carousel';
+import s from '../css/Example6.scss';
+
 
 const imgStyle = {
     maxWidth: '100%',
@@ -149,6 +161,145 @@ const Home = () => (
                      }, 750);
                  }}>
                 &#8680;
+            </div>
+        </div>
+
+        <div>
+            <h1>Joseph's Video pure-react-carousel</h1>
+            <div className="vid-container" style={styles.vidContainer}>
+                <iframe id="vid_frame2"
+                        style={styles.vidContainerIframe}
+                        title="Cute and funny cat videos"
+                        src="http://www.youtube.com/embed/QtC3Bo9B0yI?rel=0&showinfo=0&autohide=1"
+                        frameBorder="0"
+                        width="560"
+                        height="315">
+                </iframe>
+            </div>
+            <div>
+                <CarouselProvider
+                    visibleSlides={4.5}
+                    totalSlides={10}
+                    step={4}
+                    naturalSlideWidth={400}
+                    naturalSlideHeight={400}
+                    hasMasterSpinner
+                >
+                    <h2 className={s.headline}>2019 Simple Carousel</h2>
+
+                    <div className={s.container}>
+                        <Slider className={s.slider}>
+                            <Slide index={0}>
+                                <div className="vid-item"
+                                     style={styles.vidItem}
+                                     onClick={() => {
+                                         document.getElementById('vid_frame2').src='https://www.youtube.com/embed/QtC3Bo9B0yI?autoplay=1&rel=0&showinfo=0&autohide=1'}
+                                     }>
+                                    <div className="thumb" style={styles.thumb}>
+                                        <Image src="http://img.youtube.com/vi/QtC3Bo9B0yI/0.jpg" alt="Cute and funny cat videos"/>
+                                    </div>
+                                    <div className="desc" style={styles.desc}>THE BEST CUTE AND FUNNY CAT VIDEOS OF 2019!</div>
+                                </div>
+                            </Slide>
+                            <Slide index={1}>
+                                <div className="vid-item"
+                                     style={styles.vidItem}
+                                     onClick={() => {
+                                         document.getElementById('vid_frame2').src='https://www.youtube.com/embed/AcL0MeVZIxM?autoplay=1&rel=0&showinfo=0&autohide=1'}
+                                     }>
+                                    <div className="thumb" style={styles.thumb}><Image src="http://img.youtube.com/vi/AcL0MeVZIxM/0.jpg" alt="Funny Dog Video"/></div>
+                                    <div className="desc" style={styles.desc}>Try Not To Laugh At This Ultimate Funny Dog Video Compilation</div>
+                                </div>
+                            </Slide>
+                            <Slide index={2}>
+                                <div
+                                    className="vid-item"
+                                    style={styles.vidItem}
+                                    onClick={() => {
+                                        document.getElementById('vid_frame2').src='http://youtube.com/embed/eg6kNoJmzkY?autoplay=1&rel=0&showinfo=0&autohide=1'}
+                                    }>
+                                    <div className="thumb" style={styles.thumb}><Image src="http://img.youtube.com/vi/eg6kNoJmzkY/0.jpg" alt="Jessica Hernandez & the Deltas - Dead Brains"></Image></div>
+                                    <div className="desc" style={styles.desc}>Jessica Hernandez & the Deltas - Dead Brains</div>
+                                </div>
+                            </Slide>
+                            <Slide index={3}>
+                                <div className="vid-item"
+                                     style={styles.vidItem}
+                                     onClick={() => {
+                                         document.getElementById('vid_frame2').src='http://youtube.com/embed/_Tz7KROhuAw?autoplay=1&rel=0&showinfo=0&autohide=1'}
+                                     }>
+                                    <div className="thumb" style={styles.thumb}><Image src="http://img.youtube.com/vi/_Tz7KROhuAw/0.jpg" alt="Barbatuques"></Image></div>
+                                    <div className="desc" style={styles.desc}>Barbatuques - CD Tum P&aacute; - Sambalel&ecirc;</div>
+                                </div>
+                            </Slide>
+                            <Slide index={4}>
+                                <div className="vid-item"
+                                     style={styles.vidItem}
+                                     onClick={() => {
+                                         document.getElementById('vid_frame2').src='http://youtube.com/embed/F1f-gn_mG8M?autoplay=1&rel=0&showinfo=0&autohide=1'}
+                                     }>
+                                    <div className="thumb" style={styles.thumb}><Image src="http://img.youtube.com/vi/F1f-gn_mG8M/0.jpg" alt="Eleanor Turner plays Baroque Flamenco"></Image></div>
+                                    <div className="desc" style={styles.desc}>Eleanor Turner plays Baroque Flamenco</div>
+                                </div>
+                            </Slide>
+                            <Slide index={5}>
+                                <div className="vid-item"
+                                     style={styles.vidItem}
+                                     onClick={() => {
+                                         document.getElementById('vid_frame2').src='http://youtube.com/embed/fB8UTheTR7s?autoplay=1&rel=0&showinfo=0&autohide=1'}
+                                     }>
+                                    <div className="thumb" style={styles.thumb}><Image src="http://img.youtube.com/vi/fB8UTheTR7s/0.jpg" alt="Sleepy Man Banjo Boys: Bluegrass"></Image></div>
+                                    <div className="desc" style={styles.desc}>Sleepy Man Banjo Boys: Bluegrass</div>
+                                </div>
+                            </Slide>
+
+                            <Slide index={6}>
+                                <div className="vid-item"
+                                     style={styles.vidItem}
+                                     onClick={() => {
+                                         document.getElementById('vid_frame2').src='http://youtube.com/embed/0SNhAKyXtC8?autoplay=1&rel=0&showinfo=0&autohide=1'}
+                                     }>
+                                    <div className="thumb" style={styles.thumb}><Image src="http://img.youtube.com/vi/0SNhAKyXtC8/0.jpg" alt="Edmar Castaneda: NPR Music Tiny Desk Concert"></Image></div>
+                                    <div className="desc" style={styles.desc}>Edmar Castaneda: NPR Music Tiny Desk Concert</div>
+                                </div>
+                            </Slide>
+                            <Slide index={7}>
+                                <div className="vid-item"
+                                     style={styles.vidItem}
+                                     onClick={() => {
+                                         document.getElementById('vid_frame2').src='http://youtube.com/embed/RTHI_uGyfTM?autoplay=1&rel=0&showinfo=0&autohide=1'}
+                                     }>
+                                    <div className="thumb" style={styles.thumb}><Image src="http://img.youtube.com/vi/RTHI_uGyfTM/0.jpg" alt="Winter Harp performs Caravan"></Image></div>
+                                    <div className="desc" style={styles.desc}>Winter Harp performs Caravan</div>
+                                </div>
+                            </Slide>
+                            <Slide index={8}>
+                                <div className="vid-item"
+                                     style={styles.vidItem}
+                                     onClick={() => {
+                                         document.getElementById('vid_frame2').src='http://youtube.com/embed/abQRt6p8T7g?autoplay=1&rel=0&showinfo=0&autohide=1'}
+                                     }>
+                                    <div className="thumb" style={styles.thumb}><Image src="http://img.youtube.com/vi/abQRt6p8T7g/0.jpg" alt="The Avett Brothers Tiny Desk Concert"></Image></div>
+                                    <div className="desc" style={styles.desc}>The Avett Brothers Tiny Desk Concert</div>
+                                </div>
+                            </Slide>
+                            <Slide index={9}>
+                                <div className="vid-item"
+                                     style={styles.vidItem}
+                                     onClick={() => {
+                                         document.getElementById('vid_frame2').src='http://youtube.com/embed/fpmN9JorFew?autoplay=1&rel=0&showinfo=0&autohide=1'}
+                                     }>
+                                    <div className="thumb" style={styles.thumb}><Image src="http://img.youtube.com/vi/fpmN9JorFew/0.jpg" alt="Tracy Chapman - Give Me One Reason"></Image></div>
+                                    <div className="desc" style={styles.desc}>Tracy Chapman - Give Me One Reason</div>
+                                </div>
+                            </Slide>
+
+                        </Slider>
+                        <ButtonBack className={s.buttonBack}><h1>&lt;</h1></ButtonBack>
+                        <ButtonNext className={s.buttonNext}><h1>&gt;</h1></ButtonNext>
+                    </div>
+                    <DotGroup className={s.dotGroup} />
+                </CarouselProvider>
             </div>
         </div>
 
