@@ -182,7 +182,7 @@ const Home = () => (
                     totalSlides={10}
                     step={4}
                     naturalSlideWidth={400}
-                    naturalSlideHeight={400}
+                    naturalSlideHeight={500}
                     hasMasterSpinner
                 >
                     <h2 className={s.headline}>2019 Simple Carousel</h2>
