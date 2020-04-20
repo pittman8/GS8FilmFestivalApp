@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Button } from '@material-ui/core';
 import Slideshow from './Slideshow';
-import styles from '../css/styles';
+import styupdales from '../css/styles';
 
 const columnLeftStyle = {
     float: 'left',
