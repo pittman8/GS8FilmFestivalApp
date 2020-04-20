@@ -252,7 +252,8 @@ const Home = () => (
                                     <div className="desc" style={styles.desc}>Sleepy Man Banjo Boys: Bluegrass</div>
                                 </div>
                             </Slide>
-
+                        </Slider>
+                        <Slider className={s.slider}>
                             <Slide index={6}>
                                 <div className="vid-item"
                                      style={styles.vidItem}
