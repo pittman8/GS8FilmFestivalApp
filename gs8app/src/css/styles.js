@@ -78,30 +78,20 @@ const thumb = {
     bottom: 0,
     left: 0,
 };
-
-/*
-const vidContainerObject = {
-    position: 'absolute',
-    top: '0',
-    left: '0',
-    width: '100%',
-    height: '100%',
+const dotGroup = {
+    textAlign: 'center'
 };
-const vidContainerEmbed = {
+const buttonBack = {
     position: 'absolute',
-    top: '0',
-    left: '0',
-    width: '100%',
-    height: '100%',
+    left:-75,
+    top: '30%',
+
 };
-*/
-
-
-
-
-
-
-
+const buttonNext = {
+    position: 'absolute',
+    right:-75,
+    top: '30%'
+};
 
 
 
@@ -118,6 +108,9 @@ const Styles = {
     vidContainer,
     vidContainerIframe,
     thumb,
+    dotGroup,
+    buttonBack,
+    buttonNext,
     vidItem,
     desc,
 };

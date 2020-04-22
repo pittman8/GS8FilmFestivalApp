@@ -255,11 +255,16 @@ const Home = () => (
                                 </div>
                             </Slide>
                         </Slider>
-                        /*className={s.buttonNext}*/
-                        <ButtonBack style={{position: 'absolute', left:-75, top: '25%'}}><h1>&lt;</h1></ButtonBack>
-                        <ButtonNext style={{position: 'absolute', right:-75, top: '25%'}}><h1>&gt;</h1></ButtonNext>
+                        <h2>&lt;</h2>
+                        <ButtonBack
+                            className="buttonBack"
+                            style={styles.buttonBack}
+                        >
+                            <img src={require('../img/btn-back.jpg')}/>
+                        </ButtonBack>
+                        <ButtonNext className="buttonNext" style={styles.buttonNext}><h2>&gt;</h2></ButtonNext>
                     </div>
-                    <DotGroup className={s.dotGroup} />
+                    <DotGroup className="dotGroup" style={styles.dotGroup}/>
 
                 </CarouselProvider>
             </div>
