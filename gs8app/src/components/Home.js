@@ -4,7 +4,7 @@ import Card from '@material-ui/core/Card';
 import Contact from './Contact';
 import Subscribe from './Subscribe';
 import styles from '../css/styles';
-import $ from 'jquery';
+
 
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import {
@@ -16,17 +16,14 @@ import {
     Slide,
     Slider,
 } from 'pure-react-carousel';
-import s from '../css/Example6.scss';
+import CSVReader from 'react-csv-reader';
+import s from '../css/carousel.scss';
 
 
 const imgStyle = {
     maxWidth: '100%',
     height: 'auto'
 };
-
-styles.vidList.width = '1680px';
-//'1680px' Each video thumb img is 168px wide so 168x10=1680px.
-// When we pull data from the DB we need to calculate this number and set the carouse styles.vidList.width: ****px
 
 const Home = () => (
     <div style={styles.parentDivStyle}>
@@ -36,271 +33,234 @@ const Home = () => (
             style={imgStyle}
         />
         <h1>Thank you for making GS8 2019 a Success!</h1>
+
+
         <div>
-            <h1>Video Archive 2019</h1>
+            <h1>Film Gallery</h1>
+            <h2 className={s.headline}>2020 Films</h2>
             <div className="vid-container" style={styles.vidContainer}>
                 <iframe id="vid_frame"
                         style={styles.vidContainerIframe}
-                        title="Cute and funny cat videos"
-                        src="http://www.youtube.com/embed/QtC3Bo9B0yI?rel=0&showinfo=0&autohide=1"
+                        title="Figure Man Written by Anthony Thambynayagam"
+                        src="http://www.youtube.com/embed/pjMlCHCufrA?rel=0&showinfo=0&autohide=1"
                         frameBorder="0"
-                        width="560"
+                        width="100%"
                         height="315">
                 </iframe>
             </div>
-
-            <div className = "vid-list-container" style={styles.vidListContainer}>
-                <div className = "vid-list" style={styles.vidList}>
-
-                    <div className="vid-item"
-                         style={styles.vidItem}
-                         onClick={() => {
-                             document.getElementById('vid_frame').src='https://www.youtube.com/embed/QtC3Bo9B0yI?autoplay=1&rel=0&showinfo=0&autohide=1'}
-                         }>
-                        <div className="thumb" style={styles.thumb}><img src="http://img.youtube.com/vi/QtC3Bo9B0yI/0.jpg" alt="Cute and funny cat videos"/></div>
-                        <div className="desc" style={styles.desc}>THE BEST CUTE AND FUNNY CAT VIDEOS OF 2019!</div>
-                    </div>
-
-                    <div className="vid-item"
-                         style={styles.vidItem}
-                         onClick={() => {
-                             document.getElementById('vid_frame').src='https://www.youtube.com/embed/AcL0MeVZIxM?autoplay=1&rel=0&showinfo=0&autohide=1'}
-                         }>
-                        <div className="thumb" style={styles.thumb}><img src="http://img.youtube.com/vi/AcL0MeVZIxM/0.jpg" alt="Funny Dog Video"/></div>
-                        <div className="desc" style={styles.desc}>Try Not To Laugh At This Ultimate Funny Dog Video Compilation</div>
-                    </div>
-                    <div
-                        className="vid-item"
-                        style={styles.vidItem}
-                        onClick={() => {
-                            document.getElementById('vid_frame').src='http://youtube.com/embed/eg6kNoJmzkY?autoplay=1&rel=0&showinfo=0&autohide=1'}
-                        }>
-                        <div className="thumb" style={styles.thumb}><img src="http://img.youtube.com/vi/eg6kNoJmzkY/0.jpg" alt="Jessica Hernandez & the Deltas - Dead Brains"></img></div>
-                        <div className="desc" style={styles.desc}>Jessica Hernandez & the Deltas - Dead Brains</div>
-                    </div>
-
-                    <div className="vid-item"
-                         style={styles.vidItem}
-                         onClick={() => {
-                             document.getElementById('vid_frame').src='http://youtube.com/embed/_Tz7KROhuAw?autoplay=1&rel=0&showinfo=0&autohide=1'}
-                         }>
-                        <div className="thumb" style={styles.thumb}><img src="http://img.youtube.com/vi/_Tz7KROhuAw/0.jpg" alt="Barbatuques"></img></div>
-                        <div className="desc" style={styles.desc}>Barbatuques - CD Tum P&aacute; - Sambalel&ecirc;</div>
-                    </div>
-
-                    <div className="vid-item"
-                         style={styles.vidItem}
-                         onClick={() => {
-                             document.getElementById('vid_frame').src='http://youtube.com/embed/F1f-gn_mG8M?autoplay=1&rel=0&showinfo=0&autohide=1'}
-                         }>
-                        <div className="thumb" style={styles.thumb}><img src="http://img.youtube.com/vi/F1f-gn_mG8M/0.jpg" alt="Eleanor Turner plays Baroque Flamenco"></img></div>
-                        <div className="desc" style={styles.desc}>Eleanor Turner plays Baroque Flamenco</div>
-                    </div>
-
-                    <div className="vid-item"
-                         style={styles.vidItem}
-                         onClick={() => {
-                             document.getElementById('vid_frame').src='http://youtube.com/embed/fB8UTheTR7s?autoplay=1&rel=0&showinfo=0&autohide=1'}
-                         }>
-                        <div className="thumb" style={styles.thumb}><img src="http://img.youtube.com/vi/fB8UTheTR7s/0.jpg" alt="Sleepy Man Banjo Boys: Bluegrass"></img></div>
-                        <div className="desc" style={styles.desc}>Sleepy Man Banjo Boys: Bluegrass</div>
-                    </div>
-
-                    <div className="vid-item"
-                         style={styles.vidItem}
-                         onClick={() => {
-                             document.getElementById('vid_frame').src='http://youtube.com/embed/0SNhAKyXtC8?autoplay=1&rel=0&showinfo=0&autohide=1'}
-                         }>
-                        <div className="thumb" style={styles.thumb}><img src="http://img.youtube.com/vi/0SNhAKyXtC8/0.jpg" alt="Edmar Castaneda: NPR Music Tiny Desk Concert"></img></div>
-                        <div className="desc" style={styles.desc}>Edmar Castaneda: NPR Music Tiny Desk Concert</div>
-                    </div>
-
-                    <div className="vid-item"
-                         style={styles.vidItem}
-                         onClick={() => {
-                             document.getElementById('vid_frame').src='http://youtube.com/embed/RTHI_uGyfTM?autoplay=1&rel=0&showinfo=0&autohide=1'}
-                         }>
-                        <div className="thumb" style={styles.thumb}><img src="http://img.youtube.com/vi/RTHI_uGyfTM/0.jpg" alt="Winter Harp performs Caravan"></img></div>
-                        <div className="desc" style={styles.desc}>Winter Harp performs Caravan</div>
-                    </div>
-
-                    <div className="vid-item"
-                         style={styles.vidItem}
-                         onClick={() => {
-                             document.getElementById('vid_frame').src='http://youtube.com/embed/abQRt6p8T7g?autoplay=1&rel=0&showinfo=0&autohide=1'}
-                         }>
-                        <div className="thumb" style={styles.thumb}><img src="http://img.youtube.com/vi/abQRt6p8T7g/0.jpg" alt="The Avett Brothers Tiny Desk Concert"></img></div>
-                        <div className="desc" style={styles.desc}>The Avett Brothers Tiny Desk Concert</div>
-                    </div>
-
-                    <div className="vid-item"
-                         style={styles.vidItem}
-                         onClick={() => {
-                             document.getElementById('vid_frame').src='http://youtube.com/embed/fpmN9JorFew?autoplay=1&rel=0&showinfo=0&autohide=1'}
-                         }>
-                        <div className="thumb" style={styles.thumb}><img src="http://img.youtube.com/vi/fpmN9JorFew/0.jpg" alt="Tracy Chapman - Give Me One Reason"></img></div>
-                        <div className="desc" style={styles.desc}>Tracy Chapman - Give Me One Reason</div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="arrows">
-                <div className="arrow-left"
-                    onClick={() => {
-                        $(".vid-list-container").stop().animate({
-                            scrollLeft: "-=672"
-                        }, 750);
-                    }}>
-                    &#8678;
-                </div>
-                <div className="arrow-right"
-                     onClick={() => {
-                         $(".vid-list-container").stop().animate({
-                             //scrollLeft: "+=1512"
-                             scrollLeft: "+=672"
-                         }, 750);
-                     }}>
-                    &#8680;
-                </div>
-            </div>
-        </div>
-        
-        <div>
-            <h1>Joseph's Video pure-react-carousel</h1>
-            <div className="vid-container" style={styles.vidContainer}>
-                <iframe id="vid_frame2"
-                        style={styles.vidContainerIframe}
-                        title="Cute and funny cat videos"
-                        src="http://www.youtube.com/embed/QtC3Bo9B0yI?rel=0&showinfo=0&autohide=1"
-                        frameBorder="0"
-                        width="560"
-                        height="315">
-                </iframe>
-            </div>
+            <br/>
             <div>
                 <CarouselProvider
-                    visibleSlides={4.5}
+                    visibleSlides={4.12}
                     totalSlides={10}
                     step={4}
-                    naturalSlideWidth={400}
+                    naturalSlideWidth={425}
                     naturalSlideHeight={500}
                     hasMasterSpinner
                 >
-                    <h2 className={s.headline}>2019 Simple Carousel</h2>
+                    <div  style={{position: 'relative', width: '700px', margin: 'auto'}}>
 
-                    <div className={s.container}>
                         <Slider className={s.slider}>
                             <Slide index={0}>
-                                <div className="vid-item"
-                                     style={styles.vidItem}
-                                     onClick={() => {
-                                         document.getElementById('vid_frame2').src='https://www.youtube.com/embed/QtC3Bo9B0yI?autoplay=1&rel=0&showinfo=0&autohide=1'}
-                                     }>
+                                <div
+                                    className="vid-item"
+                                    style={styles.vidItem}
+                                    onClick={() => {
+                                        document.getElementById('vid_frame').src='https://www.youtube.com/embed/pjMlCHCufrA?autoplay=1&rel=0&showinfo=0&autohide=1'}
+                                    }
+                                >
                                     <div className="thumb" style={styles.thumb}>
-                                        <Image src="http://img.youtube.com/vi/QtC3Bo9B0yI/0.jpg" alt="Cute and funny cat videos"/>
+                                        <Image
+                                            src="http://img.youtube.com/vi/pjMlCHCufrA/0.jpg"
+                                            alt="Figure Man Written by Anthony Thambynayagam"
+                                        />
                                     </div>
-                                    <div className="desc" style={styles.desc}>THE BEST CUTE AND FUNNY CAT VIDEOS OF 2019!</div>
+                                    <div className="desc" style={styles.desc}>
+                                        Figure Man Written by Anthony Thambynayagam
+                                    </div>
                                 </div>
                             </Slide>
+
                             <Slide index={1}>
-                                <div className="vid-item"
-                                     style={styles.vidItem}
-                                     onClick={() => {
-                                         document.getElementById('vid_frame2').src='https://www.youtube.com/embed/AcL0MeVZIxM?autoplay=1&rel=0&showinfo=0&autohide=1'}
-                                     }>
-                                    <div className="thumb" style={styles.thumb}><Image src="http://img.youtube.com/vi/AcL0MeVZIxM/0.jpg" alt="Funny Dog Video"/></div>
-                                    <div className="desc" style={styles.desc}>Try Not To Laugh At This Ultimate Funny Dog Video Compilation</div>
+                                <div
+                                    className="vid-item"
+                                    style={styles.vidItem}
+                                    onClick={() => {
+                                        document.getElementById('vid_frame').src='https://www.youtube.com/embed/mCbqDuNgMp4?autoplay=1&rel=0&showinfo=0&autohide=1'}
+                                    }
+                                >
+                                    <div className="thumb" style={styles.thumb}>
+                                        <Image
+                                            src="http://img.youtube.com/vi/mCbqDuNgMp4/0.jpg"
+                                            alt="The Best Day of My Life by Jason Austin"
+                                        />
+                                    </div>
+                                    <div className="desc" style={styles.desc}>
+                                        The Best Day of My Life by Jason Austin
+                                    </div>
                                 </div>
                             </Slide>
+
                             <Slide index={2}>
                                 <div
                                     className="vid-item"
                                     style={styles.vidItem}
                                     onClick={() => {
-                                        document.getElementById('vid_frame2').src='http://youtube.com/embed/eg6kNoJmzkY?autoplay=1&rel=0&showinfo=0&autohide=1'}
-                                    }>
-                                    <div className="thumb" style={styles.thumb}><Image src="http://img.youtube.com/vi/eg6kNoJmzkY/0.jpg" alt="Jessica Hernandez & the Deltas - Dead Brains"></Image></div>
-                                    <div className="desc" style={styles.desc}>Jessica Hernandez & the Deltas - Dead Brains</div>
+                                        document.getElementById('vid_frame').src='http://youtube.com/embed/DVJU9-3QHzE?autoplay=1&rel=0&showinfo=0&autohide=1'}
+                                    }
+                                >
+                                    <div className="thumb" style={styles.thumb}>
+                                        <Image
+                                            src="http://img.youtube.com/vi/DVJU9-3QHzE/0.jpg"
+                                            alt="Untitled by Nolan Gonzalez"
+                                        />
+                                    </div>
+                                    <div className="desc" style={styles.desc}>
+                                        Untitled by Nolan Gonzalez
+                                    </div>
                                 </div>
                             </Slide>
+
                             <Slide index={3}>
-                                <div className="vid-item"
-                                     style={styles.vidItem}
-                                     onClick={() => {
-                                         document.getElementById('vid_frame2').src='http://youtube.com/embed/_Tz7KROhuAw?autoplay=1&rel=0&showinfo=0&autohide=1'}
-                                     }>
-                                    <div className="thumb" style={styles.thumb}><Image src="http://img.youtube.com/vi/_Tz7KROhuAw/0.jpg" alt="Barbatuques"></Image></div>
-                                    <div className="desc" style={styles.desc}>Barbatuques - CD Tum P&aacute; - Sambalel&ecirc;</div>
+                                <div
+                                    className="vid-item"
+                                    style={styles.vidItem}
+                                    onClick={() => {
+                                        document.getElementById('vid_frame').src='http://youtube.com/embed/OgovstrZ5OU?autoplay=1&rel=0&showinfo=0&autohide=1'}
+                                    }
+                                >
+                                    <div className="thumb" style={styles.thumb}>
+                                        <Image
+                                            src="http://img.youtube.com/vi/OgovstrZ5OU/0.jpg"
+                                            alt="Ernest Argyros 2"
+                                        />
+                                    </div>
+                                    <div className="desc" style={styles.desc}>
+                                        Ernest Argyros 2
+                                    </div>
                                 </div>
                             </Slide>
+
                             <Slide index={4}>
                                 <div className="vid-item"
                                      style={styles.vidItem}
                                      onClick={() => {
-                                         document.getElementById('vid_frame2').src='http://youtube.com/embed/F1f-gn_mG8M?autoplay=1&rel=0&showinfo=0&autohide=1'}
-                                     }>
-                                    <div className="thumb" style={styles.thumb}><Image src="http://img.youtube.com/vi/F1f-gn_mG8M/0.jpg" alt="Eleanor Turner plays Baroque Flamenco"></Image></div>
-                                    <div className="desc" style={styles.desc}>Eleanor Turner plays Baroque Flamenco</div>
+                                         document.getElementById('vid_frame').src='http://youtube.com/embed/gt9pDsYuubI?autoplay=1&rel=0&showinfo=0&autohide=1'}
+                                     }
+                                >
+                                    <div className="thumb" style={styles.thumb}>
+                                        <Image
+                                            src="http://img.youtube.com/vi/gt9pDsYuubI/0.jpg"
+                                            alt="Public Grief by Ali Rowenna"
+                                        />
+                                    </div>
+                                    <div className="desc" style={styles.desc}>Our Usual Table by La Dele Sines and Alan Phillips
+                                        Public Grief by Ali Rowenna
+                                    </div>
                                 </div>
                             </Slide>
+
                             <Slide index={5}>
-                                <div className="vid-item"
-                                     style={styles.vidItem}
-                                     onClick={() => {
-                                         document.getElementById('vid_frame2').src='http://youtube.com/embed/fB8UTheTR7s?autoplay=1&rel=0&showinfo=0&autohide=1'}
-                                     }>
-                                    <div className="thumb" style={styles.thumb}><Image src="http://img.youtube.com/vi/fB8UTheTR7s/0.jpg" alt="Sleepy Man Banjo Boys: Bluegrass"></Image></div>
-                                    <div className="desc" style={styles.desc}>Sleepy Man Banjo Boys: Bluegrass</div>
+                                <div
+                                    className="vid-item"
+                                    style={styles.vidItem}
+                                    onClick={() => {
+                                        document.getElementById('vid_frame').src='http://youtube.com/embed/hXyDYJLn_sE?autoplay=1&rel=0&showinfo=0&autohide=1'}
+                                    }
+                                >
+                                    <div className="thumb" style={styles.thumb}>
+                                        <Image
+                                            src="http://img.youtube.com/vi/hXyDYJLn_sE/0.jpg"
+                                            alt="Surprise in the Freezer by Corrie Greening"
+                                        />
+                                    </div>
+                                    <div className="desc" style={styles.desc}>
+                                        Surprise in the Freezer by Corrie Greening
+                                    </div>
                                 </div>
                             </Slide>
-                        </Slider>
-                        <Slider className={s.slider}>
+
                             <Slide index={6}>
-                                <div className="vid-item"
-                                     style={styles.vidItem}
-                                     onClick={() => {
-                                         document.getElementById('vid_frame2').src='http://youtube.com/embed/0SNhAKyXtC8?autoplay=1&rel=0&showinfo=0&autohide=1'}
-                                     }>
-                                    <div className="thumb" style={styles.thumb}><Image src="http://img.youtube.com/vi/0SNhAKyXtC8/0.jpg" alt="Edmar Castaneda: NPR Music Tiny Desk Concert"></Image></div>
-                                    <div className="desc" style={styles.desc}>Edmar Castaneda: NPR Music Tiny Desk Concert</div>
+                                <div
+                                    className="vid-item"
+                                    style={styles.vidItem}
+                                    onClick={() => {
+                                        document.getElementById('vid_frame').src='http://youtube.com/embed/UURuEgH2yqw?autoplay=1&rel=0&showinfo=0&autohide=1'}
+                                    }
+                                >
+                                    <div className="thumb" style={styles.thumb}>
+                                        <Image
+                                            src="http://img.youtube.com/vi/UURuEgH2yqw/0.jpg"
+                                            alt="Block Party by Clint Berquist Music by DUBCAR"
+                                        />
+                                    </div>
+                                    <div className="desc" style={styles.desc}>
+                                        Block Party by Clint Berquist Music by DUBCAR
+                                    </div>
                                 </div>
                             </Slide>
+
                             <Slide index={7}>
-                                <div className="vid-item"
-                                     style={styles.vidItem}
-                                     onClick={() => {
-                                         document.getElementById('vid_frame2').src='http://youtube.com/embed/RTHI_uGyfTM?autoplay=1&rel=0&showinfo=0&autohide=1'}
-                                     }>
-                                    <div className="thumb" style={styles.thumb}><Image src="http://img.youtube.com/vi/RTHI_uGyfTM/0.jpg" alt="Winter Harp performs Caravan"></Image></div>
-                                    <div className="desc" style={styles.desc}>Winter Harp performs Caravan</div>
+                                <div
+                                    className="vid-item"
+                                    style={styles.vidItem}
+                                    onClick={() => {
+                                        document.getElementById('vid_frame').src='http://youtube.com/embed/JTDctcyssJM?autoplay=1&rel=0&showinfo=0&autohide=1'}
+                                    }
+                                >
+                                    <div className="thumb" style={styles.thumb}>
+                                        <Image
+                                            src="http://img.youtube.com/vi/JTDctcyssJM/0.jpg"
+                                            alt="Our Usual Table by La Dele Sines and Alan Phillips"
+                                        />
+                                    </div>
+                                    <div className="desc" style={styles.desc}>
+                                        Our Usual Table by La Dele Sines and Alan Phillips
+                                    </div>
                                 </div>
                             </Slide>
+
                             <Slide index={8}>
                                 <div className="vid-item"
                                      style={styles.vidItem}
                                      onClick={() => {
-                                         document.getElementById('vid_frame2').src='http://youtube.com/embed/abQRt6p8T7g?autoplay=1&rel=0&showinfo=0&autohide=1'}
+                                         document.getElementById('vid_frame').src='http://youtube.com/embed/jSgNTYQtolI?autoplay=1&rel=0&showinfo=0&autohide=1'}
                                      }>
-                                    <div className="thumb" style={styles.thumb}><Image src="http://img.youtube.com/vi/abQRt6p8T7g/0.jpg" alt="The Avett Brothers Tiny Desk Concert"></Image></div>
-                                    <div className="desc" style={styles.desc}>The Avett Brothers Tiny Desk Concert</div>
+                                    <div className="thumb" style={styles.thumb}>
+                                        <Image
+                                            src="http://img.youtube.com/vi/jSgNTYQtolI/0.jpg"
+                                            alt="Leap Year MMXX by Angelina Tolentino"
+                                        />
+                                    </div>
+                                    <div className="desc" style={styles.desc}>
+                                        Leap Year MMXX by Angelina Tolentino
+                                    </div>
                                 </div>
                             </Slide>
                             <Slide index={9}>
                                 <div className="vid-item"
                                      style={styles.vidItem}
                                      onClick={() => {
-                                         document.getElementById('vid_frame2').src='http://youtube.com/embed/fpmN9JorFew?autoplay=1&rel=0&showinfo=0&autohide=1'}
+                                         document.getElementById('vid_frame').src='http://youtube.com/embed/3ODq0UvATTc?autoplay=1&rel=0&showinfo=0&autohide=1'}
                                      }>
-                                    <div className="thumb" style={styles.thumb}><Image src="http://img.youtube.com/vi/fpmN9JorFew/0.jpg" alt="Tracy Chapman - Give Me One Reason"></Image></div>
-                                    <div className="desc" style={styles.desc}>Tracy Chapman - Give Me One Reason</div>
+                                    <div className="thumb" style={styles.thumb}>
+                                        <Image
+                                            src="http://img.youtube.com/vi/3ODq0UvATTc/0.jpg"
+                                            alt="The Big Con by Augie Pagan"
+                                        />
+                                    </div>
+                                    <div className="desc" style={styles.desc}>
+                                        The Big Con by Augie Pagan
+                                    </div>
                                 </div>
                             </Slide>
-
                         </Slider>
-                        <ButtonBack className={s.buttonBack}><h1>&lt;</h1></ButtonBack>
-                        <ButtonNext className={s.buttonNext}><h1>&gt;</h1></ButtonNext>
+                        /*className={s.buttonNext}*/
+                        <ButtonBack style={{position: 'absolute', left:-75, top: '25%'}}><h1>&lt;</h1></ButtonBack>
+                        <ButtonNext style={{position: 'absolute', right:-75, top: '25%'}}><h1>&gt;</h1></ButtonNext>
                     </div>
                     <DotGroup className={s.dotGroup} />
+
                 </CarouselProvider>
             </div>
         </div>

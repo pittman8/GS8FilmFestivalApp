@@ -36,6 +36,8 @@ const rowDivStyle = {
     align: 'left'
 };
 
+
+
 const vidContainer = {
     position: 'relative',
     paddingTottom: '52%',
@@ -50,6 +52,33 @@ const vidContainerIframe = {//.vid-container object, vid-container embed
     width: '100%',
     height: '100%',
 };
+
+const vidItem = {
+    display: 'block',
+    width: '148px',
+    height: '178px',
+    float: 'left',
+    margin: '0',
+    padding: '5px',
+};
+
+const desc = {
+    color: '#21A1D2',
+    fontSize: '15px',
+    marginTop:'5px',
+};
+
+const thumb = {
+    overflow:'hidden',
+    height: '110px',
+    //width: '120px',
+    //margin: 'auto',
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+};
+
 /*
 const vidContainerObject = {
     position: 'absolute',
@@ -67,54 +96,16 @@ const vidContainerEmbed = {
 };
 */
 
-const vidListContainer = {
-    width: '92%',
-    overflow: 'hidden',
-    marginTop: '20px',
-    marginLeft: '4%',
-    paddingBottom: '20px',
-};
-
-const vidList = {
-    width: '1344px',
-    position: 'relative',
-    top:'0',
-    left: '0',
-};
 
 
 
-const vidItem = {
-    display: 'block',
-    width: '148px',
-    height: '148px',
-    float: 'left',
-    margin: '0',
-    padding: '10px',
-};
 
-const thumb = {
-    overflow:'hidden',
-    height: '110px',
-    //width: '120px',
-    //margin: 'auto',
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0,
-};
 
-const thumbImg = {
-    width: '100%',
-    position: 'relative',
-    top: '-13px',
-};
 
-const desc = {
-    color: '#21A1D2',
-    fontSize: '15px',
-    marginTop:'5px',
-};
+
+
+
+
 
 const Styles = {
     parentDivStyle,
@@ -126,10 +117,7 @@ const Styles = {
     socMed,
     vidContainer,
     vidContainerIframe,
-    vidListContainer,
-    vidList,
     thumb,
-    thumbImg,
     vidItem,
     desc,
 };

@@ -1,23 +1,21 @@
 .container {
   position: relative;
-  max-width: 800px;
+  max-width: 400px;
   margin: auto;
 }
 
 .buttonBack {
   position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+  top: 25%;
+  left: -75;
 }
 
 .buttonNext {
   position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
+  top: 25%;
+  right: -75;
+  //transform: translateY(-50%);
 }
-
 
 .dotGroup {
   text-align: center;
